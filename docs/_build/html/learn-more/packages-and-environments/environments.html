@@ -1,0 +1,1121 @@
+<!-- _templates/layout.html -->
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Environments</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/twemoji.css?v=2199c511" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colors.css?v=ca198985" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome6.css?v=dfa9907d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_styles.css?v=63e98db3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bannerStyles.css?v=5d5deea9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/questionairStyles.css?v=7dfcb917" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/popupStyles.css?v=0bcfa664" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
+    <script src="../../_static/twemoji.js?v=a4381b3f"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'learn-more/packages-and-environments/environments';</script>
+    <script src="../../_static/js/external_tab.js?v=e06e64a3"></script>
+    <script src="../../_static/js/custom.js?v=9293e9f5"></script>
+    <script src="../../_static/js/auto-open-dropdown-link.js?v=4121caed"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pip" href="pip.html" />
+    <link rel="prev" title="Packages" href="packages.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="../../index.html" class="logo-container">
+    <img src="../../_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../commonproblems/index.html">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="../../index.html" class="logo-container">
+    <img src="../../_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../commonproblems/index.html">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../../_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/h8EVaV9ShP" title="Chat with us on Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Chat with us on Discord</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:pythonsupport@dtu.dk?subject=Python%20Support%20Request%20-%20%5Breplace%20with%20problem%5D&body=%0A-%20Relevant%20course%20number%20%28if%20applicable%29%3A%0A%0A-%20Description%20of%20the%20issue%20experienced%3A%0A%0A-%20Error%20messages%20%28if%20any%29%3A%0A%0A-%20Which%20versions%20of%20Python%20and/or%20packages%20do%20you%20have%3A%0A%0AKind%20regards%0A%3Cinsert%20name%3E%0A" title="Contact us by mail" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-envelope shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Contact us by mail</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../install/python.html">Install Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install/windows/automated.html"><span class="fab fa-windows"></span>  — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/windows/manual.html"><span class="fab fa-windows"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/macos/automated.html"><span class="fab fa-apple"></span> — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/macos/manual.html"><span class="fab fa-apple"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/linux/manual.html"><span class="fab fa-linux"></span> — Manual Installation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vscode/index.html">Visual Studio Code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vscode/python-script.html">Python files (.py)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vscode/jupyter-notebooks.html">Jupyter Notebooks (.ipynb)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/index.html">Guides for DTU Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course/01001.html">Mathematics 1a 01001/01003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course/01002.html">Mathematics 1b 01002/01004</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course/02002.html">Computer Programming 02002/02003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course/02402.html">Statistics 02402</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course/02461.html">Introduction to Intelligent Systems 02461</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course/10060.html">Physics 10060</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Learn more</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../terminal.html">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../idle.html">IDLE (only for 02002/02003)</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Packages and Environments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="packages.html">Packages</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip.html">pip</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../videos/index.html">Video Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uninstall/index.html">Uninstall Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../commonproblems/index.html">Common Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/dtudk/pythonsupport-page" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/learn-more/packages-and-environments/environments.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Environments</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-management-with-conda">Environment management with Conda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment-with-commands">Creating an environment with commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment-from-an-environment-yml-file">Creating an environment from an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activating-an-environment">Activating an environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-environment-management-with-conda">Example environment management with Conda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments-with-venv">Environments with venv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-venv-in-vs-code">Using venv in VS Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-venv-in-the-terminal">Using venv in the Terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-virtual-environments-with-jupyter-ipython">Using Virtual Environments with Jupyter/IPython</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="environments">
+<span id="learn-more-environments"></span><h1>Environments<a class="headerlink" href="#environments" title="Link to this heading">#</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can copy and paste code in the code blocks
+by hovering your mouse over the code block and pressing the icon (<span class="far fa-clone fa-flip-vertical"></span>) appearing in the top right corner.</p>
+</div>
+<p>Python environments are isolated spaces where you can manage separate sets of packages for different projects.
+This helps avoid conflicts  when different projects require different versions of the
+same package. For example, one project might require <code class="docutils literal notranslate"><span class="pre">numpy==1.23</span></code>, while another may require <code class="docutils literal notranslate"><span class="pre">numpy==1.25</span></code>. If these versions
+are incompatible, switching back and forth between them for different
+projects can become quite annoying. Instead of reinstalling the correct version each time you switch projects,
+you can use environments that allow you to keep fully functional and separate
+package lists and swap between them.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you need to know what packages are, please check <a class="reference internal" href="packages.html"><span class="doc">here</span></a>.</p>
+</div>
+<p>Python environments allow you to maintain separate sets of packages, making switching
+between configurations without conflicts.
+Using environments can be used for a variety of things:</p>
+<ol class="arabic simple">
+<li><p>Quickly testing whether certain packages conflicts</p></li>
+<li><p>Checking whether a developed Python script is compatible with different package versions</p></li>
+<li><p>Ensuring a minimal package list (no unused packages)</p></li>
+<li><p>Maintaining multiple functional package environments</p></li>
+</ol>
+<p>It is recommended that each course or project be given a separate environment
+to ensure that their requirements do not interfere.</p>
+<section id="environment-management-with-conda">
+<h2>Environment management with Conda<a class="headerlink" href="#environment-management-with-conda" title="Link to this heading">#</a></h2>
+<p class="sd-text-right"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-muted reference external" href="https://www.google.com/search?q=cheatsheet+python+conda" title="Search Google for cheatsheet"><span>Find a Conda cheatsheet <span class="fas fa-toolbox"></span></span></a></p>
+<p>Conda lets users create separate sets of packages for different projects called <strong>environments</strong>.
+When users switch between projects, they can switch to the environment of that project, which would prevent the need to
+manage packages each time a different project is used. The Conda manager allows you to create and manage
+environments with specific packages and Python versions. This can be useful if a specific
+package requires a specific Python version.</p>
+<p>One can list all <em>global</em> environments by:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-0">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">list</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-1">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <em>global</em> environment, created using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span></code> is stored in Conda’s default directory.
+Creating your environment in the global environment list will make it
+to activate just the environment name and centrally manage all your environments.</p>
+<p>Alternatively, one can create <em>subdirectory</em> environments.
+These are created using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--prefix</span></code>. It will be stored in the specified
+folder, which would keep the environment self-contained within your project.</p>
+</div>
+<section id="creating-an-environment-with-commands">
+<h3>Creating an environment with commands<a class="headerlink" href="#creating-an-environment-with-commands" title="Link to this heading">#</a></h3>
+<p>For example, let us create an environment with Conda for Course A. An environment can be created by using:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-2">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># create an environment named &#39;course-A&#39; (in the global environment list)</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="p">-</span><span class="n">-name</span> <span class="n">course-A</span>
+<span class="c"># alternatively, the environment can be placed in a subdirectory</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="p">-</span><span class="n">-prefix</span> <span class="n">course-A</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-3">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an environment named &#39;course-A&#39; (in the global environment list)</span>
+conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>course-A
+<span class="c1"># alternatively, the environment can be placed in a subdirectory</span>
+conda<span class="w"> </span>create<span class="w"> </span>--prefix<span class="w"> </span>course-A
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-an-environment-from-an-environment-yml-file">
+<span id="learn-more-environments-yaml"></span><h3>Creating an environment from an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file<a class="headerlink" href="#creating-an-environment-from-an-environment-yml-file" title="Link to this heading">#</a></h3>
+<p>In some cases an installation guide will share an <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually">environment.yml</a> file.
+This file contains the full details to reproduce an environment.
+When having an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file, it can be installed with (note, the file
+can have <em>any</em> name):</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-4">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-f</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-5">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is an example <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file that creates an environment
+named <code class="docutils literal notranslate"><span class="pre">course-A</span></code>, with Python and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">course-A</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nodefaults</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy</span>
+</pre></div>
+</div>
+</section>
+<section id="activating-an-environment">
+<h3>Activating an environment<a class="headerlink" href="#activating-an-environment" title="Link to this heading">#</a></h3>
+<p>Once the environment is created, one can use the environment by <em>activating</em> it.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-6">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># if the enviroment was created with --name:</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">course-A</span>
+<span class="c"># if the environment was created in a sub directory (--prefix):</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="p">.\</span><span class="n">course-A</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-7">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># if the enviroment was created with --name:</span>
+conda<span class="w"> </span>activate<span class="w"> </span>course-A
+<span class="c1"># if the environment was created in a sub directory (--prefix):</span>
+conda<span class="w"> </span>activate<span class="w"> </span>./course-A
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once an environment has been created and sourced (activated), all <code class="docutils literal notranslate"><span class="pre">python</span></code> commands only act in <em>that environment</em>.</p>
+<p>Every executed Python script will only use the packages installed
+in the environment. To exit the environment, run the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</p>
+</section>
+<section id="example-environment-management-with-conda">
+<h3>Example environment management with Conda<a class="headerlink" href="#example-environment-management-with-conda" title="Link to this heading">#</a></h3>
+<p>Below is a complete example of creating an environment using a specific Python
+version, installing a specific package, running code in the environment, and exiting it.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-8">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="p">-</span><span class="n">-name</span> <span class="n">numpy-env</span> <span class="n">python</span><span class="p">=</span><span class="n">3</span><span class="p">.</span><span class="n">12</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">numpy-env</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="s2">&quot;numpy=1.23&quot;</span>
+<span class="n">python</span> <span class="n">-c</span> <span class="s2">&quot;import numpy as np ; print(np.__version__)&quot;</span>
+<span class="n">conda</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-9">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>numpy-env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
+conda<span class="w"> </span>activate<span class="w"> </span>numpy-env
+conda<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;numpy=1.23&quot;</span>
+python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import numpy as np ; print(np.__version__)&quot;</span>
+conda<span class="w"> </span>deactivate
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code creates a new Conda environment named numpy-env with Python 3.12 installed. It then
+activates the environment and installs version 1.23 of the Numpy library. After installation,
+it runs a Python command to import NumPy and print the installed version of Numpy to verify the installation.
+Finally, the environment is deactivated, returning the user to their previous environment.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Further documentation on environments can be found
+<a class="reference external" href="https://docs.anaconda.com/working-with-conda/environments/">here</a> while
+management of the environments can be found <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment">here</a>.</p>
+</div>
+<p>The equivalent <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file would look like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy-env</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.12</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy=1.23</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="environments-with-venv">
+<h2>Environments with venv<a class="headerlink" href="#environments-with-venv" title="Link to this heading">#</a></h2>
+<p>While Conda offers powerful tools for managing complex environments and dependencies, there are
+situations where <code class="docutils literal notranslate"><span class="pre">venv</span></code> might be more suitable. <code class="docutils literal notranslate"><span class="pre">venv</span></code> is ideal for simpler projects that only require
+Python packages, as it is lightweight and easy to use.
+It is built into Python, so it does not require
+additional installation, making it convenient for managing environments directly tied to the system’s Python.</p>
+<section id="using-venv-in-vs-code">
+<h3>Using venv in VS Code<a class="headerlink" href="#using-venv-in-vs-code" title="Link to this heading">#</a></h3>
+<p>VS Code helps manage virtual environments through some built-in commands.
+Here is a brief explanation of how to set up a virtual environment in VS Code:</p>
+<p>First, check that you are already in a virtual environment (see point 5 below). If not, proceed to the next step.</p>
+<ol class="arabic">
+<li><p>Create a folder/directory according to the course you wish to work on.</p>
+<p><em>This is optional but helps keep your projects organized.</em>.</p>
+</li>
+<li><p>Press <span class="guilabel">Open Folder</span> to start working in the designated course
+folder. If you already have several opened folders, this will not be
+visible. Just select the workspace.</p>
+<a class="reference internal image-reference" href="../../_images/environments-vscode-open-folder.png"><img alt="Open the folder in VS Code" class="align-center" src="../../_images/environments-vscode-open-folder.png" style="width: 700px;" />
+</a>
+</li>
+<li><p>We will create a virtual environment once you are in a folder/workspace.
+Press <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">P</kbd> and search for
+<code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Create</span> <span class="pre">Environment...</span></code>, and select that.</p>
+<a class="reference internal image-reference" href="../../_images/environments-vscode-python-env.png"><img alt="VS Code command prompt" class="align-center" src="../../_images/environments-vscode-python-env.png" style="width: 600px;" />
+</a>
+</li>
+<li><p>Next, select the option below:</p>
+<a class="reference internal image-reference" href="../../_images/environments-vscode-python-env-venv.png"><img alt="VS Code venv creation" class="align-center" src="../../_images/environments-vscode-python-env-venv.png" style="width: 600px;" />
+</a>
+</li>
+<li><p>Check that the virtual environment is functional. Sometimes you must
+run a small Python script to enable the virtual environment,
+either press <span class="fas fa-arrow-right"></span>, or <kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd>.</p>
+<a class="reference internal image-reference" href="../../_images/environments-vscode-python-env-venv-check.png"><img alt="Check if virtual environment is enabled through VS Code" class="align-center" src="../../_images/environments-vscode-python-env-venv-check.png" style="width: 700px;" />
+</a>
+</li>
+</ol>
+</section>
+<section id="using-venv-in-the-terminal">
+<h3>Using venv in the Terminal<a class="headerlink" href="#using-venv-in-the-terminal" title="Link to this heading">#</a></h3>
+<p>The package <code class="docutils literal notranslate"><span class="pre">venv</span></code> creates environments using the <code class="docutils literal notranslate"><span class="pre">pip</span></code> method.
+Once an environment has been created and
+sourced (activated), all <code class="docutils literal notranslate"><span class="pre">pip</span></code> commands only act within that environment.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you need to learn what <code class="docutils literal notranslate"><span class="pre">pip</span></code> is, please check the description in <a class="reference internal" href="pip.html"><span class="doc">pip</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">venv</span></code> package can only create environments with different packages.
+It cannot switch between different Python versions.</p>
+<p>An environment will be a directory on your computer. Deleting
+it will be the same as deleting the environment.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Environments in <a class="reference internal" href="../vscode/index.html"><span class="doc">Visual Studio Code</span></a> requires special handling when
+working in workspaces. Please see <a class="reference internal" href="../../faqs/index.html#faq-vscode-venv-workspace"><span class="std std-ref">here</span></a>.</p>
+</div>
+<p>An environment can be created using:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-10">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="p">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">venv</span><span class="p">&gt;</span>
+<span class="c"># create an environment named &#39;course-A&#39; in the current directory</span>
+<span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">course-A</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-11">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span>venv&gt;
+<span class="c1"># create an environment named &#39;course-A&#39; in the current directory</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>course-A
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once created, one can <em>activate</em>/use the environment by <em>sourcing</em> a file.
+Change <code class="docutils literal notranslate"><span class="pre">course-A</span></code> with the name of the environment.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-12">
+Windows</label><div class="sd-tab-content docutils">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please see <a class="reference internal" href="../../faqs/index.html#faq-win-ps-execution-policy"><span class="std std-ref">this FAQ entry</span></a>!</p>
+</div>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">course-A</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-13">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>course-A/bin/activate
+</pre></div>
+</div>
+</div>
+</div>
+<p>Every executed Python script will only use the packages installed
+in the environment, and every <code class="docutils literal notranslate"><span class="pre">pip</span></code> command will only install/remove packages
+in the environment. To exit the environment, run the command <code class="docutils literal notranslate"><span class="pre">deactivate</span></code>.</p>
+<p>Below is an example workflow of creating an environment, installing a specific
+package, running a code using the environment, and exiting the environment.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-14">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">numpy-env</span>
+<span class="n">numpy-env</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;numpy==1.23.*&quot;</span>
+<span class="n">python</span> <span class="n">-c</span> <span class="s2">&quot;import numpy as np ; print(np.__version__)&quot;</span>
+<span class="n">deactivate</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-15">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>numpy-env
+<span class="nb">source</span><span class="w"> </span>numpy-env/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;numpy==1.23.*&quot;</span>
+python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import numpy as np ; print(np.__version__)&quot;</span>
+deactivate
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code creates a Python virtual environment called numpy-env using venv, then activates
+it to install version 1.23 of Numpy using <code class="docutils literal notranslate"><span class="pre">pip</span></code>. After installing, it verifies
+the installation by printing the installed Numpy version. Finally, the environment is deactivated,
+returning the user to their previous environment.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Further documentation on environments are available on <a class="reference external" href="https://code.visualstudio.com/docs/python/environments">VS Code’s webpage</a>.</p>
+</div>
+</section>
+<section id="using-virtual-environments-with-jupyter-ipython">
+<h3>Using Virtual Environments with Jupyter/IPython<a class="headerlink" href="#using-virtual-environments-with-jupyter-ipython" title="Link to this heading">#</a></h3>
+<p>Jupyter Notebooks and IPython are interactive computing environments that
+enable users to write and execute code in a notebook format. These notebooks
+can combine code, text, and visualizations. Jupyter Notebooks are
+commonly used in many DTU courses.</p>
+<p>Virtual environments and Jupyter can cause issues when Jupyter is installed in the
+system (not in the virtual environment). The kernel is fixed to launch
+the Python interpreter it was installed with. The kernel is a process that allows you to
+execute the code in your Jupyter Notebook by providing the necessary Python language support.</p>
+<p>The simplest way to check whether your Jupyter Notebook is using your virtual environment
+is to execute the following code in a notebook cell:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exec_prefix</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You are all set if it shows your virtual environment’s directory.
+If not, install the kernel runner in the virtual environment:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-16" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-16">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-m</span> <span class="n">ipykernel</span> <span class="n">install</span> <span class="p">-</span><span class="n">-prefix</span> <span class="p">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">venv</span><span class="p">|</span><span class="n">conda-env</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-17" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="mac" for="sd-tab-item-17">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--prefix<span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span>venv<span class="p">|</span>conda-env&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;path</span> <span class="pre">to</span> <span class="pre">venv|conda-env&gt;</span></code> with the path to your virtual environment.
+The problem and the fix are described in greater detail
+<a class="reference external" href="https://ipython.readthedocs.io/en/stable/install/kernel_install.html">here</a>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="packages.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Packages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pip.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pip</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-management-with-conda">Environment management with Conda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment-with-commands">Creating an environment with commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-environment-from-an-environment-yml-file">Creating an environment from an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activating-an-environment">Activating an environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-environment-management-with-conda">Example environment management with Conda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments-with-venv">Environments with venv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-venv-in-vs-code">Using venv in VS Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-venv-in-the-terminal">Using venv in the Terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-virtual-environments-with-jupyter-ipython">Using Virtual Environments with Jupyter/IPython</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By DTU Python support developers
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, DTU Python support.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

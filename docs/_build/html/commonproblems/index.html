@@ -1,0 +1,918 @@
+<!-- _templates/layout.html -->
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Common Problems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/twemoji.css?v=2199c511" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colors.css?v=ca198985" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome6.css?v=dfa9907d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=63e98db3" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/bannerStyles.css?v=5d5deea9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/questionairStyles.css?v=7dfcb917" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/popupStyles.css?v=0bcfa664" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
+    <script src="../_static/twemoji.js?v=a4381b3f"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'commonproblems/index';</script>
+    <script src="../_static/js/external_tab.js?v=e06e64a3"></script>
+    <script src="../_static/js/custom.js?v=9293e9f5"></script>
+    <script src="../_static/js/auto-open-dropdown-link.js?v=4121caed"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Uninstall Software" href="../uninstall/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="../index.html" class="logo-container">
+    <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="../index.html" class="logo-container">
+    <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/h8EVaV9ShP" title="Chat with us on Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Chat with us on Discord</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:pythonsupport@dtu.dk?subject=Python%20Support%20Request%20-%20%5Breplace%20with%20problem%5D&body=%0A-%20Relevant%20course%20number%20%28if%20applicable%29%3A%0A%0A-%20Description%20of%20the%20issue%20experienced%3A%0A%0A-%20Error%20messages%20%28if%20any%29%3A%0A%0A-%20Which%20versions%20of%20Python%20and/or%20packages%20do%20you%20have%3A%0A%0AKind%20regards%0A%3Cinsert%20name%3E%0A" title="Contact us by mail" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-envelope shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Contact us by mail</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../install/python.html">Install Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install/windows/automated.html"><span class="fab fa-windows"></span>  — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/windows/manual.html"><span class="fab fa-windows"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/macos/automated.html"><span class="fab fa-apple"></span> — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/macos/manual.html"><span class="fab fa-apple"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/linux/manual.html"><span class="fab fa-linux"></span> — Manual Installation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../learn-more/vscode/index.html">Visual Studio Code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/vscode/python-script.html">Python files (.py)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/vscode/jupyter-notebooks.html">Jupyter Notebooks (.ipynb)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/index.html">Guides for DTU Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../course/01001.html">Mathematics 1a 01001/01003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/01002.html">Mathematics 1b 01002/01004</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/02002.html">Computer Programming 02002/02003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/02402.html">Statistics 02402</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/02461.html">Introduction to Intelligent Systems 02461</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/10060.html">Physics 10060</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../learn-more/index.html">Learn more</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/terminal.html">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/idle.html">IDLE (only for 02002/02003)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../learn-more/packages-and-environments/index.html">Packages and Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../learn-more/packages-and-environments/packages.html">Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learn-more/packages-and-environments/environments.html">Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learn-more/packages-and-environments/pip.html">pip</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../videos/index.html">Video Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uninstall/index.html">Uninstall Software</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Common Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/dtudk/pythonsupport-page" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/commonproblems/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Common Problems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-python-and-its-installation">Problems with Python and its Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-conda-and-packages">Problems with Conda and Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-visual-studio-code">Problems with Visual Studio Code</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="common-problems">
+<span id="id1"></span><h1>Common Problems<a class="headerlink" href="#common-problems" title="Link to this heading">#</a></h1>
+<p>Here you will find some quick fixes for common problems and errors</p>
+<section id="problems-with-python-and-its-installation">
+<h2>Problems with Python and its Installation<a class="headerlink" href="#problems-with-python-and-its-installation" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“The term import is not recognized…”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">It is likely that Python code is being run in the terminal and not in the Python interpreter. To fix this, run the code in the Python interpreter either by running <cite>python</cite> in the terminal or by running the code in a Python script.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>%<span class="w"> </span>import<span class="w"> </span><span class="s2">&quot;module_name&quot;</span>
+import:<span class="w"> </span>The<span class="w"> </span>term<span class="w"> </span>import<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>recognized<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>cmdlet,<span class="w"> </span><span class="k">function</span>,<span class="w"> </span>script<span class="w"> </span>file,<span class="w"> </span>or<span class="w"> </span>operable<span class="w"> </span>program.
+Check<span class="w"> </span>the<span class="w"> </span>spelling<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>name,<span class="w"> </span>or<span class="w"> </span><span class="k">if</span><span class="w"> </span>a<span class="w"> </span>path<span class="w"> </span>was<span class="w"> </span>included,<span class="w"> </span>verify<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>path<span class="w"> </span>is<span class="w"> </span>correct<span class="w"> </span>and<span class="w"> </span>try<span class="w"> </span>again.
+
+%<span class="w"> </span>python
+Python<span class="w"> </span><span class="m">3</span>.12.1<span class="w"> </span><span class="o">(</span>default,<span class="w"> </span>Sep<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">2021</span>,<span class="w"> </span><span class="m">16</span>:59:01<span class="o">)</span><span class="w"> </span><span class="o">[</span>MSC<span class="w"> </span>v.1916<span class="w"> </span><span class="m">64</span><span class="w"> </span>bit<span class="w"> </span><span class="o">(</span>AMD64<span class="o">)]</span><span class="w"> </span>::<span class="w"> </span>Anaconda,<span class="w"> </span>Inc.<span class="w"> </span>on<span class="w"> </span>win32
+Type<span class="w"> </span><span class="s2">&quot;help&quot;</span>,<span class="w"> </span><span class="s2">&quot;copyright&quot;</span>,<span class="w"> </span><span class="s2">&quot;credits&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;license&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+&gt;&gt;&gt;<span class="w"> </span>import<span class="w"> </span><span class="s2">&quot;module_name&quot;</span>
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“unable to initialize device PRN”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">It is likely that Python code is being run in the terminal and not in the Python interpreter. To fix this, run the code in the Python interpreter either by running <cite>python</cite> in the terminal or by running the code in a Python script.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>%<span class="w"> </span>print<span class="o">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="o">)</span>
+unable<span class="w"> </span>to<span class="w"> </span>initialize<span class="w"> </span>device<span class="w"> </span>PRN
+
+%<span class="w"> </span>python
+Python<span class="w"> </span><span class="m">3</span>.12.1<span class="w"> </span><span class="o">(</span>default,<span class="w"> </span>Sep<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">2021</span>,<span class="w"> </span><span class="m">16</span>:59:01<span class="o">)</span><span class="w"> </span><span class="o">[</span>MSC<span class="w"> </span>v.1916<span class="w"> </span><span class="m">64</span><span class="w"> </span>bit<span class="w"> </span><span class="o">(</span>AMD64<span class="o">)]</span><span class="w"> </span>::<span class="w"> </span>Anaconda,<span class="w"> </span>Inc.<span class="w"> </span>on<span class="w"> </span>win32
+Type<span class="w"> </span><span class="s2">&quot;help&quot;</span>,<span class="w"> </span><span class="s2">&quot;copyright&quot;</span>,<span class="w"> </span><span class="s2">&quot;credits&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;license&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+&gt;&gt;&gt;<span class="w"> </span>print<span class="o">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="o">)</span>
+Hello,<span class="w"> </span>World!
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“urllib2.URLError: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED]…”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is likely due to missing certificates in the Python installation.</p>
+<p class="sd-card-text">To fix this:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Open Finder or file browser press the <code class="file docutils literal notranslate"><span class="pre">Apps</span></code> or <code class="file docutils literal notranslate"><span class="pre">Applications</span></code> folder to the left.</p></li>
+<li><p class="sd-card-text">Find the Python 3.X folder.</p></li>
+<li><p class="sd-card-text">Locate the file name <code class="file docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Certificates.com</span></code> and and press it, it will quickly run a terminal command to install the certificates.</p></li>
+</ol>
+<p class="sd-card-text">(Optional) Another fix could be to install the certifi package from pip by running <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">certifi</span></code> in the terminal.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Local TeX Live (2023) is older than remote repository (2024)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is due to the TeX Live version being outdated. To fix this reinstall TeX Live with the latest version.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Getting requirements to build editable did not run successfully</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is likely due to corrupt files inside the folder. To fix this remove the corrupt files and try again.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“Error loading webview: Error: Could not register service workers: InvalidStateError: Failed to register a ServiceWorker: The document is in an invalid state”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This problem is likely due to the Visual Studio Code cache. To fix this, clear the cache by follwing the steps below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Windows</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p class="sd-card-text">Close VSCode and kill any background processes running in the task manager.</p></li>
+<li><p class="sd-card-text">Go to the file explorer and to the path <code class="file docutils literal notranslate"><span class="pre">C:Users&lt;user_name&gt;AppDataRoamingCode</span></code> and clear the contents of the folders <code class="file docutils literal notranslate"><span class="pre">Cache</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedData</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedExtensions</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedExtensionVSIXs</span></code> (if this folder exists) and <code class="file docutils literal notranslate"><span class="pre">Code</span> <span class="pre">Cache</span></code>.</p></li>
+<li><p class="sd-card-text">Restart VSCode.</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+MacOS</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p class="sd-card-text">Close VSCode and kill any background processes running in the task manager.</p></li>
+<li><p class="sd-card-text">Go to the file explorer and to the path <code class="file docutils literal notranslate"><span class="pre">/Users/&lt;user_name&gt;/Library/Application</span> <span class="pre">Support/Code</span></code> and clear the contents of the folders <code class="file docutils literal notranslate"><span class="pre">Cache</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedData</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedExtensions</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedExtensionVSIXs</span></code> (if this folder exists) and <code class="file docutils literal notranslate"><span class="pre">Code</span> <span class="pre">Cache</span></code>.</p></li>
+<li><p class="sd-card-text">Restart VSCode.</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Linux</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p class="sd-card-text">Close VSCode and kill any background processes running in the task manager.</p></li>
+<li><p class="sd-card-text">Go to the file explorer and to the path <code class="file docutils literal notranslate"><span class="pre">/home/&lt;user_name&gt;/.config/Code</span></code> and clear the contents of the folders <code class="file docutils literal notranslate"><span class="pre">Cache</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedData</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedExtensions</span></code>, <code class="file docutils literal notranslate"><span class="pre">CachedExtensionVSIXs</span></code> (if this folder exists) and <code class="file docutils literal notranslate"><span class="pre">Code</span> <span class="pre">Cache</span></code>.</p></li>
+<li><p class="sd-card-text">Restart VSCode.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“OSError: [Error 86] Bad CPU type in executable: &lt;path_to_cbc_binaries&gt; “</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is due to Pulp complaining about bad CPU type on arm Mac as cbc (pulp dependency) doesn’t have arm binaries. This can be fixed using rosetta translation layer. Run the following command in the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/sbin/softwareupdate<span class="w"> </span>--install-rosetta<span class="w"> </span>--agree-to-license
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">While loop getting stuck in IDLE</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is a problem native to the installation, which occur in versions of <cite>idle</cite> from 3.11.4 up till and excluding the 3.12 release (bug fixed in 3.12 and later).
+This can be solved by downgrading the <cite>idle</cite> version, by running the following command in the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11.3
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“OSError: … Error loading ….libfbgemm.dll..”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is a Windows specific error. This happens because of a problem that is related to the released torch version and is likely due to a conflict between pip and conda. To fix this, uninstall the torch package and reinstall it using conda:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>torch
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>pytorch<span class="w"> </span><span class="nv">pytorch</span><span class="o">==</span><span class="m">2</span>.4.0
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="problems-with-conda-and-packages">
+<h2>Problems with Conda and Packages<a class="headerlink" href="#problems-with-conda-and-packages" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Incompatible Architecture</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is common when switching computers and transferring files through one drive and icloud.
+The solution is the same on MacOS, Linux and Windows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>--force-reinstall<span class="w"> </span>&lt;package&gt;
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“Module not found… “ or “No Module Named”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you have not previously installed the package the solution is to open your <cite>Terminal</cite> and write:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>&lt;package&gt;
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“Module not found” - when you’ve installed the module</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you have installed the package before, you need to change your kernel.
+If you are using a <cite>Jupyter Notebook</cite> you have to go to the to right corner, where it says <cite>Python 3.XX.XX</cite> (this is the python version you are using). You need to click on it, after which a dropdown will come down.
+Here you need to click <span class="menuselection">Select Another Kernel… ‣ Python Environments ‣ base (Python 3.12.XX)</span>.
+This will open the Python downloaded using our installation guides.</p>
+<p class="sd-card-text">If you are using a normal Python script, go to the bottom right corner. Here it will only show the Python version, for example <cite>3.9.XX 64-bit</cite>. You need to click this, after which a dropdown will come down. Here you can see your Python versions. If you want to use the version installed using our guides, select <cite>Python 3.12.XX (‘base’)</cite>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Sympy pretty print not functioning properly</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">When using sympy and the printing does not work after writing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span> <span class="k">as</span><span class="o">*</span>
+<span class="n">init_printing</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Most of the cases can be solved by wrinting the following in stead:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span> <span class="k">as</span><span class="o">*</span>
+<span class="n">init_printing</span><span class="p">(</span><span class="n">use_latex</span><span class="o">=</span><span class="s1">&#39;mathjax&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Multiple conda installations</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you have multiple installations of conda we highly recommend that you <a class="reference internal" href="../uninstall/index.html#python-uninstall"><span class="std std-ref">uninstall</span></a>.</p>
+</div>
+</details></section>
+<section id="problems-with-visual-studio-code">
+<h2>Problems with Visual Studio Code<a class="headerlink" href="#problems-with-visual-studio-code" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">EPERM: Operation Not Permitted</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This error occurs when your folder is in restricted mode, when you do not have access to the folder or when the folder is not trusted. To fix this:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Check if the folder is in restricted mode. If it is, change the permissions.</p></li>
+<li><p class="sd-card-text">Check if you have access to the folder. If you do not, ask the owner for access.</p></li>
+<li><p class="sd-card-text">Check if the folder is trusted. If it is not, make sure that VS Code is allowed to access the folder.</p></li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">“Module not found… “</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This error occurs when you either have not installed the module or when the module is installed in a different environment. To fix this:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Try to import the module in another environment (see <a class="reference internal" href="../learn-more/vscode/python-script.html#learn-more-vscode-script-select-interpreter"><span class="std std-ref">here</span></a>).</p></li>
+<li><p class="sd-card-text">If the module is not installed, install it using the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">module_name</span></code>.</p></li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Missing “Run and debug” in Python files</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This error occurs when you have not installed the Python extension. To fix this:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Install the Python extension by clicking on the Extensions icon in the Activity Bar on the side of the window, searching for Python, and clicking on the Install button.</p></li>
+<li><p class="sd-card-text">If it still does not work, right-click on the three dots in the upper right corner next to where the run and debug button normally is. Then make sure that the run and debug have a checkmark.</p></li>
+</ol>
+<a class="reference internal image-reference" href="commonproblems/images/Run-and-debug.png"><img alt="Run and Debug" class="align-center" src="commonproblems/images/Run-and-debug.png" style="width: 400px;" />
+</a>
+</div>
+</details></section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../uninstall/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Uninstall Software</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-python-and-its-installation">Problems with Python and its Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-conda-and-packages">Problems with Conda and Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-visual-studio-code">Problems with Visual Studio Code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By DTU Python support developers
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, DTU Python support.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

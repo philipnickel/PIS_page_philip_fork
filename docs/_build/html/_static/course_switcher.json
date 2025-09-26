@@ -1,0 +1,8 @@
+[
+    {
+        "name": "courses",
+        "version": "courses",
+        "url": "courses/index.html",
+        "preferred": true
+    }
+]
