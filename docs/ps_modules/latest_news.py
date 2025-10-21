@@ -1,335 +1,173 @@
-#!/usr/bin/env python3
-"""
-Latest News Module for Sphinx Documentation (LangChain loader version)
+from __future__ import annotations
 
-Uses langchain_community.document_loaders.UnstructuredRSTLoader to load .rst files.
-Preserves your metadata/excerpt extraction and carousel generation.
-"""
-
-import re
+import sys
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Optional, Tuple, Dict, Any, List
-from langchain_community.document_loaders import UnstructuredRSTLoader
+from typing import Dict, List, Optional
+
+# -- minimal dependency: docutils only
+from docutils import nodes
+from docutils.core import publish_doctree
 
 
-def extract_metadata(content: str) -> Dict[str, str]:
-    """Extract metadata from RST content."""
-    metadata = {}
-    lines = content.split("\n")
-
-    for line in lines:
-        if line.startswith(":"):
-            if ":" in line[1:]:
-                key, value = line[1:].split(":", 1)
-                metadata[key.strip()] = value.strip()
-    return metadata
+# ------------------------------ Models ----------------------------------------
+@dataclass
+class article:
+    filename: str
+    title: str
+    date: datetime
+    keywords: List[str]
+    description: str
 
 
-def extract_excerpt(content: str, max_length: int = 200) -> str:
-    """Extract an excerpt from RST content, preferring a 'Description' section."""
-    lines = content.split("\n")
-    content_lines: List[str] = []
-
-    # Look for Description section
-    in_description = False
-    description_found = False
-
-    for line in lines:
-        line = line.strip()
-
-        if line.lower() == "description" and not description_found:
-            in_description = True
-            description_found = True
-            continue
-        elif line == "-----------" and in_description:
-            continue
-
-        if in_description:
-            if line.startswith("=") or line.startswith("-") or line.startswith("*"):
-                break
-            elif line:
-                content_lines.append(line)
-                if len(" ".join(content_lines)) > max_length * 1.5:
-                    break
-
-    if not description_found:
-        skip_metadata = True
-        title_found = False
-
-        for line in lines:
-            line = line.strip()
-
-            if skip_metadata:
-                if line.startswith(":"):
-                    continue
-                elif line and not line.startswith("=") and not title_found:
-                    title_found = True
-                    continue
-                elif line.startswith("="):
-                    continue
-                elif line:
-                    skip_metadata = False
-                    content_lines.append(line)
-            else:
-                if line:
-                    content_lines.append(line)
-                    if len(" ".join(content_lines)) > max_length * 1.5:
-                        break
-
-    excerpt = " ".join(content_lines).strip()
-
-    # Strip basic RST formatting
-    excerpt = re.sub(r"\*\*(.*?)\*\*", r"\1", excerpt)  # **bold**
-    excerpt = re.sub(r"\*(.*?)\*", r"\1", excerpt)  # *italic*
-    excerpt = re.sub(r"`(.*?)`", r"\1", excerpt)  # `code`
-    excerpt = re.sub(r":[\w-]+:`([^`]+)`", r"\1", excerpt)  # :role:`text`
-    excerpt = re.sub(r"\n+", " ", excerpt)
-    excerpt = re.sub(r"\s+", " ", excerpt)
-
-    # Remove section headers and metadata
-    excerpt = re.sub(r"\b\w+\s*[-=]{3,}\s*", "", excerpt)
-    excerpt = re.sub(r":\w+:\s*[^s]+", "", excerpt)
-
-    if len(excerpt) > max_length:
-        excerpt = excerpt[:max_length].rsplit(" ", 1)[0] + "..."
-
-    return excerpt
+def _meta_from_doctree(tree: nodes.document) -> Dict[str, str]:
+    meta: Dict[str, str] = {}
+    for m in tree.findall(nodes.meta):
+        name = (m.get("name") or "").strip()
+        value = (m.get("content") or "").strip()
+        if name and value:
+            meta[name.lower()] = value
+    return meta
 
 
-def _parse_date(s: str) -> Optional[datetime]:
-    """Try a few common date formats; return None if unparseable."""
-    if not s:
-        return None
-    fmts = ("%Y-%m-%d", "%Y/%m/%d", "%d-%m-%Y", "%d/%m/%Y")
-    for fmt in fmts:
-        try:
-            return datetime.strptime(s, fmt)
-        except ValueError:
-            continue
-    return None
+def _first_paragraph(tree: nodes.document) -> Optional[str]:
+    p = tree.next_node(nodes.paragraph)
+    return p.astext().strip() if p else None
 
 
-def _load_rst_with_langchain(rst_path: Path) -> Tuple[str, Dict[str, Any]]:
-    """
-    Load a single RST file via UnstructuredRSTLoader in 'single' mode.
-    Returns (content, loader_metadata).
-    """
-    loader = UnstructuredRSTLoader(str(rst_path), mode="single")
+def _parse_post(path: Path) -> Optional[article]:
 
-    docs = loader.load()
-    if not docs:
-        return "", {}
-    doc = docs[0]
-    content = doc.page_content or ""
-    lc_meta = dict(doc.metadata or {})
-    return content, lc_meta
+    tree = publish_doctree(path.read_text(encoding="utf-8"))
+    meta = _meta_from_doctree(tree)
+
+    title = meta.get("title")
+
+    date_raw = meta.get("date", "")
+    date = datetime.strptime(date_raw, "%d-%m-%Y")
+
+    keywords_str = meta.get("keywords", "")
+    keywords = [t.strip() for t in keywords_str.split(",") if t.strip()]
+
+    description = _first_paragraph(tree)
+
+    return article(
+        filename=path.stem,
+        title=title,
+        date=date,
+        keywords=keywords,
+        description=description,
+    )
 
 
-def get_latest_news_posts(
-    news_dir_path: str,
-    max_posts: Optional[int] = None,
-    tag_filter: Optional[str] = None,
-):
-    """Get the latest news posts from the specified directory using LangChain loader."""
-    news_dir = Path(news_dir_path)
-
-    if not news_dir.exists():
-        print(f"News directory {news_dir} does not exist")
+# ------------------------------ Collection ------------------------------------
+def _collect_posts(
+    dir_path: Path, tag_filter: Optional[str] = None, max_posts: Optional[int] = None
+) -> List[article]:
+    if not dir_path.exists():
+        print(f"[warn] directory not found: {dir_path}", file=sys.stderr)
         return []
 
-    posts = []
+    tag_filter_norm = (tag_filter or "").strip().lower()
+    posts: List[article] = []
 
-    for rst_file in news_dir.glob("*.rst"):
-        try:
-            content, lc_meta = _load_rst_with_langchain(rst_file)
-            if not content.strip():
-                continue
+    for p in sorted(dir_path.glob("*.rst")):
+        # skip non-posts or templates
+        # if p.name.startswith("template"):
+        #    continue
 
-            # Merge: prefer explicit in-file :key: value metadata; fall back to loader metadata
-            file_meta = extract_metadata(content)
-            merged_meta = {**lc_meta, **file_meta}
-
-            excerpt = extract_excerpt(content)
-
-            # Tags
-            tags_str = merged_meta.get("tags", "") or merged_meta.get("Keywords", "")
-            tags = [t.strip() for t in tags_str.split(",")] if tags_str else []
-
-            # Optional filter
-            if tag_filter and tag_filter != "all":
-                if tag_filter not in tags:
-                    continue
-
-            # Title: prefer :title: then loader title, else filename prettified
-            title = (
-                merged_meta.get("title")
-                or merged_meta.get("Title")
-                or rst_file.stem.replace("_", " ").title()
-            )
-
-            date_raw = merged_meta.get("date") or merged_meta.get("Date") or ""
-            date_obj = _parse_date(date_raw)
-
-            post = {
-                "filename": rst_file.stem,
-                "title": title,
-                "date": date_raw,  # keep original string for display
-                "date_obj": date_obj,  # parsed for sorting
-                "excerpt": excerpt,
-                "tags": tags,
-                "image": merged_meta.get("image", "") or merged_meta.get("Image", ""),
-                "content": content,
-            }
-            posts.append(post)
-
-        except Exception as e:
-            print(f"Error reading {rst_file}: {e}")
+        post = _parse_post(p)
+        if not post:
             continue
 
-    # Sort by parsed date desc, fallback to filename mtime if missing
-    def _sort_key(p):
-        if p.get("date_obj"):
-            return (p["date_obj"], p["filename"])
-        # fallback: file mtime (newest first)
-        try:
-            mtime = (news_dir / f"{p['filename']}.rst").stat().st_mtime
-        except Exception:
-            mtime = 0.0
-        return (datetime.fromtimestamp(mtime), p["filename"])
+        if tag_filter_norm and tag_filter_norm != "all":
+            if tag_filter_norm not in [t.lower() for t in post.keywords]:
+                continue
 
-    posts.sort(key=_sort_key, reverse=True)
+        posts.append(post)
 
     return posts[:max_posts] if max_posts else posts
 
 
-def get_all_tags(news_dir_path: str):
-    """Get all unique tags using the LangChain loader."""
-    news_dir = Path(news_dir_path)
-    all_tags = set()
-
-    if not news_dir.exists():
-        return []
-
-    for rst_file in news_dir.glob("*.rst"):
-        try:
-            content, lc_meta = _load_rst_with_langchain(rst_file)
-            if not content.strip():
-                continue
-
-            file_meta = extract_metadata(content)
-            merged_meta = {**lc_meta, **file_meta}
-
-            tags_str = merged_meta.get("tags", "") or merged_meta.get("Keywords", "")
-            if tags_str:
-                tags = [t.strip() for t in tags_str.split(",") if t.strip()]
-                all_tags.update(tags)
-
-        except Exception as e:
-            print(f"Error reading {rst_file}: {e}")
-            continue
-
-    return sorted(all_tags)
+def _all_keywords(dir_path: Path) -> List[str]:
+    tags = set()
+    for p in dir_path.glob("*.rst"):
+        post = _parse_post(p)
+        if post:
+            tags.update(post.keywords)
+    return sorted(tags, key=str.lower)
 
 
-def _indent_content(content: str, level: int) -> str:
-    return "\n".join(
-        (" " * level + line if line.strip() else "") for line in content.splitlines()
-    )
+# ------------------------------ Rendering -------------------------------------
+def _indent(text: str, n: int) -> str:
+    pad = " " * n
+    return "\n".join((pad + line) if line.strip() else "" for line in text.splitlines())
 
 
-def generate_tabbed_carousel_rst(news_dir_path: str) -> str:
-    all_tags = get_all_tags(news_dir_path)
-
-    rst_content = """.. tab-set::
-   :sync-group: news-filter
-
-"""
-
-    all_posts = get_latest_news_posts(news_dir_path, max_posts=10)
-    carousel_content = generate_carousel_rst(all_posts)
-    rst_content += f"""   .. tab-item:: All
-      :sync: all
-
-{_indent_content(carousel_content, 6)}
-
-"""
-
-    for tag in all_tags:
-        tag_posts = get_latest_news_posts(news_dir_path, tag_filter=tag, max_posts=10)
-        if tag_posts:
-            carousel_content = generate_carousel_rst(tag_posts)
-            rst_content += f"""   .. tab-item:: {tag.title()}
-      :sync: {tag}
-
-{_indent_content(carousel_content, 6)}
-
-"""
-
-    return rst_content
-
-
-def generate_carousel_rst(posts, include_header: bool = False) -> str:
+def _render_carousel(posts: List[article]) -> str:
     if not posts:
         return ".. note::\n   No news posts available.\n\n"
 
-    latest_posts = sorted(
-        posts,
-        key=lambda x: (x.get("date_obj") or datetime.min, x["title"]),
-        reverse=True,
-    )
+    # sphinx-design card carousel (3 columns)
+    out = [".. card-carousel:: 3", ""]
+    for p in posts:
+        # link to the doc by name (assumes each file is a doc in latest_news/)
+        link = f"latest_news/{p.filename}"
+        date_disp = p.date
 
-    rst_content = ""
-    if include_header:
-        rst_content += """
-:fas:`newspaper` Latest News
-============================
-
-"""
-
-    rst_content += """.. card-carousel:: 3
-
-"""
-
-    for post in latest_posts:
-        print(f"latest posts:{latest_posts} ")
-
-        display_date = post["date"]
-        if display_date:
-            try:
-                date_obj = _parse_date(display_date)
-                if date_obj:
-                    display_date = date_obj.strftime("%B %d, %Y")
-            except Exception:
-                pass
-
-        read_more_link = f"latest_news/{post['filename']}"
-
-        rst_content += f"""   .. card::
-      :link: {read_more_link}
+        card = f"""   .. card::
+      :link: {link}
       :link-type: doc
 
-      **{post['title']}**
+      **{p.title}**
       
-      {post['excerpt']}
+      {p.description}
       
-      :fas:`calendar-alt` {display_date}
+      :fas:`calendar-alt` {date_disp}
+"""
+        out.append(card.rstrip() + "\n")
+    return "\n".join(out).rstrip() + "\n"
+
+
+def _render_tabset(dir_path: Path, max_posts: int = 10) -> str:
+    # "All" tab
+    all_posts = _collect_posts(dir_path, max_posts=max_posts)
+    all_carousel = _render_carousel(all_posts)
+
+    rst = """.. tab-set::
+   :sync-group: news-filter
 
 """
-    return rst_content.rstrip()
+    rst += f"""   .. tab-item:: All
+      :sync: all
+
+{_indent(all_carousel, 6)}
+
+"""
+
+    # Per-tag tabs
+    for keyword in _all_keywords(dir_path):
+        keyword_posts = _collect_posts(
+            dir_path, tag_filter=keyword, max_posts=max_posts
+        )
+        if not keyword_posts:
+            continue
+        carousel = _render_carousel(keyword_posts)
+        rst += f"""   .. tab-item:: {keyword.title()}
+      :sync: {keyword}
+
+{_indent(carousel, 6)}
+
+"""
+    return rst
 
 
+# ------------------------------ Sphinx hook -----------------------------------
 def create_news_carousel(app):
     try:
         src_dir = Path(app.srcdir)
         news_dir = src_dir / "latest_news"
-        output_file = news_dir / "generated_latest_news_carousel.rst"
-        generated_content = generate_tabbed_carousel_rst(str(news_dir))
-        output_file.write_text(generated_content, encoding="utf-8")
+        out_file = news_dir / "generated_latest_news_carousel.rst"
+        out_file.write_text(_render_tabset(news_dir, max_posts=10), encoding="utf-8")
     except Exception as e:
-        print(f"Error creating news carousel: {e}")
-
-
-def setup_latest_news(app):
-    app.connect("builder-inited", create_news_carousel)
-    pass
+        print(f"[error] create_news_carousel: {e}", file=sys.stderr)

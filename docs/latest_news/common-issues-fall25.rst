@@ -1,8 +1,9 @@
-Current Common Issues
-=================================================
+.. meta::
+   :title: Current Common Issues - Fall 2025
+   :date: 2025-10-21
+   :tags: installation, python, vscode, error, kernel
 
-:date: 2025-10-21
-:tags: installation, python, vscode, error, kernel
+
 
 Description
 -----------
