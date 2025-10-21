@@ -32,9 +32,9 @@ You can add more detailed content in sections like this. The cards will only sho
 3. **Required metadata** (place at the top of the file):
    - `:date:` - Publication date in YYYY-MM-DD format
    - `:author:` - Author name (usually "DTU Python Support")
-   - `:image:` - Optional image path relative to the docs directory
 
 4. **Build the site** to see your changes:
+
    ```bash
    ./venv/bin/python -m sphinx -b html docs build/html
    ```
@@ -47,17 +47,10 @@ You can add more detailed content in sections like this. The cards will only sho
 - **Excerpt**: Automatically extracts the first paragraph(s) as excerpt
 - **Native Sphinx**: Uses `sphinx-design` grid and card directives
 
-## News Display Features
-
-- **Responsive Design**: Cards adapt to screen size (1 column mobile, 2 tablet, 3 desktop)
-- **Professional Styling**: Uses your site's existing theme and colors
-- **Native Integration**: Pure Sphinx directives, no custom HTML/CSS/JS needed
-- **Accessibility**: Proper semantic markup through sphinx-design
-- **Easy Maintenance**: Just add RST files and rebuild
-
 ## File Naming Convention
 
 Use descriptive filenames that reflect the content:
+
 - `workshop_update_2024_09.rst`
 - `python_installation_tips.rst`
 - `discord_community_milestone.rst`
@@ -66,9 +59,11 @@ Use descriptive filenames that reflect the content:
 ## Technical Implementation
 
 The news display is implemented using:
+
 - **`sphinx-design`** grid and card directives for layout
 - **Python extension** (`ps_modules/latest_news.py`) for automatic content loading
 - **RST include** (`_rst_includes/latest_news_carousel.rst`) for generated content
 - **Native Sphinx build process** - no external dependencies
 
 This approach is much cleaner than custom HTML/CSS/JS and integrates perfectly with your existing Sphinx workflow!
+
