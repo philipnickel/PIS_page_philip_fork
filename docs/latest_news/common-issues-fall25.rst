@@ -1,54 +1,36 @@
-Python Installation Guide: Anaconda Distribution
+Current Common Issues
 =================================================
 
-:date: 2024-09-25
-:tags: installation, python, guide
+:date: 2025-10-21
+:tags: installation, python, vscode, error, kernel
 
 Description
 -----------
 
-Essential tips for a smooth Python installation experience using the Anaconda distribution. This comprehensive guide will help you set up Python correctly for your DTU coursework with pre-installed packages and easy package management.
+This is page shows current common python related issues for DTU students an works a checklist for solving them.
 
-Why Anaconda?
+
+Checklist
 -------------
 
-Anaconda is the recommended Python distribution for DTU students because it includes:
+**Step 1: Disable "Python Environments" extention in VSCode**
+- On the left hand side in VSCode press the extentions tab.
+- Scroll down and finde the extention called "Python Environments" and click it.
+- Click Disable and then Restart extention.
 
-- **Pre-installed packages**: NumPy, Pandas, Matplotlib, Jupyter, and more
-- **Package management**: Easy installation of additional packages
-- **Virtual environments**: Isolated environments for different projects
-- **Cross-platform**: Works on Windows, macOS, and Linux
+**Step 2: Downgrade "Jupyter" extention in VSCode**
+- On the left hand side in VSCode press the extentions tab.
+- Scroll down and finde the extention called "Jupyter" and click it.
+- Click the arrow icon next to "Uninstall" and then click "Install Specific Version".
+- Select version 2024.11.0 and it will install.
+- Click Restart extention.
 
-Installation Steps
-------------------
+**Step 3: Change Python Locator**
+- On the left hand side in VSCode press the settings tab (gear icon).
+- Click "Settings".
+- In the search bar at the top type "Python Locator".
+- Click the dropdown menu displaying "native" and select "js".
 
-**Step 1: Download Anaconda**
-- Visit `anaconda.com/download`
-- Choose the latest Python 3.x version
-- Select your operating system
+**Step 4: Restart VSCode**
+- Close VSCode completely and then open it again.
 
-**Step 2: Installation**
-- Run the installer as administrator (Windows) or with sudo (macOS/Linux)
-- Accept the license agreement
-- Choose "Add Anaconda to PATH" (recommended)
-- Complete the installation
-
-**Step 3: Verification**
-- Open Terminal/Command Prompt
-- Type `python --version` to verify installation
-- Type `conda --version` to verify package manager
-
-Troubleshooting
----------------
-
-**Common Issues:**
-- **PATH not set**: Manually add Anaconda to your system PATH
-- **Permission errors**: Run installer as administrator
-- **Conflicting Python**: Uninstall other Python versions first
-
-**Getting Help:**
-- Visit our Discord server for real-time support
-- Check our FAQ section for common problems
-- Attend our installation workshops
-
-Need help? Visit us during office hours or join our Discord community!

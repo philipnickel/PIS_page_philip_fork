@@ -1,60 +1,42 @@
-Discord Community: Join 500+ Students Getting Python Help
+Kernel Has Died
 ==========================================================
 
-:date: 2024-09-24
-:tags: community, discord, support
+:date: 2025-10-21
+:tags: kernel, python, vscode, jupyter
 
 Description
 -----------
 
-Our Discord community continues to grow! Join hundreds of students getting Python help, sharing knowledge, and building connections with fellow programmers. Get real-time support, participate in coding challenges, and connect with your peers.
+This problem occurs when the Jupyter kernel unexpectedly stops working while running code in a Jupyter notebook.
 
-Community Growth
-----------------
+This appears as `Kernel has died` message in red in the notebook interface and will result in none of the code cells being executable.
 
-Amazing growth in our support community this semester:
+Solution
+---------
+To resolve the "Kernel has died" issue, you need to create a new Conda environment. Following the steps below will guide you through the process of creating an environment named "DTU" with the necessary packages installed.
 
-**Current Statistics:**
-- **500+ active members** from all DTU programs
-- **50+ questions answered daily** by our support team
-- **24/7 peer-to-peer support** from experienced students
-- **Average response time: 15 minutes** during active hours
+**Step 1: Open your terminal or command prompt**
+On MacOs search for :menuselection:`Terminal` using your Spotlight search (:kbd:`Command+Space`) and press :kbd:`Enter`.
 
-**New Features This Semester:**
-- Dedicated voice channels for group study sessions
-- Automated bot for quick Python syntax help
-- Weekly coding challenges with prizes
-- Alumni mentorship program
+On windows open PowerShell by opening the menu bar, then search for :menuselection:`Windows PowerShell`
 
-Popular Channels
-----------------
 
-**#installation-help**
-- Get help with Python, Anaconda, and package installations
-- Share screenshots of error messages
-- Get step-by-step guidance
+**Step 2: Create a new Conda Environment** 
+Copy and paste the following line of code into your terminal and press :kbd:`Enter`:
 
-**#debugging-assistance**
-- Post your code and get debugging help
-- Learn debugging techniques from experts
-- Share debugging tips and tricks
+.. code-block:: bash
 
-**#course-specific-help**
-- Find help for specific DTU courses
-- Connect with students in your program
-- Share course-specific resources
+      conda create --name DTU python={{ python_version_recommended }} dtumathtools pandas scipy statsmodels uncertainties -y
 
-**#general-discussion**
-- Chat about programming, technology, and career paths
-- Share interesting projects and code snippets
-- Build your professional network
+.. include:: /_rst_includes/tip-copy.rst
 
-How to Join
------------
+ 
+**Step 3: Select the new environment as your Kernel in VS Code**
+Open VS Code and select `DTU(Python 3.12.XX)` as your Kernel.
 
-1. **Visit our Discord server**: `discord.gg/dtu-python-support`
-2. **Verify your DTU email** to access all channels
-3. **Introduce yourself** in the #introductions channel
-4. **Start asking questions** and helping others!
 
-Join the conversation and get help from both instructors and fellow students!
+
+.. note::
+
+    If you need any help with how to select the kernel in VS Code or other related issues, please refer to the guide :ref:`here <jupyter-notebooks>`.
+

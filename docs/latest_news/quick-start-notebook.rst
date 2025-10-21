@@ -1,40 +1,35 @@
-Workshop Updates: Computational Thinking Sessions
+Quick Start Jupyter Notebook
 =================================================
 
-:date: 2024-09-26
-:tags: workshops, events, programming
+:date: 2025-10-21
+:tags: python, jupyter, programming, notebook, sympy
 
 Description
 -----------
 
-We're excited to announce our upcoming computational thinking workshops starting this week! These hands-on sessions are designed to help students develop essential programming skills through interactive coding sessions and real-world problem solving.
+This page gives a quick start guide to using Jupyter Notebooks for programming in Python, including installation instructions and basic usage tips. 
 
-Workshop Schedule
------------------
+Guide
+------
+**Step 1: Create a Jupyter Notebook**
+- Open VSCode.
+- Hold `Ctrl + Shift + P` (or `Cmd + Shift + P` on Mac) to open the command palette.
+- Type "Create: New Jupyter Notebook" and select it.
+- A new notebook will open in a new tab.
 
-**Week 1: Introduction to Computational Thinking**
-- Monday 2:00 PM - 4:00 PM
-- Wednesday 10:00 AM - 12:00 PM
-- Friday 1:00 PM - 3:00 PM
+**Step 2: Select Python Kernel**
+- In the top right corner of the notebook, click on "Select Kernel".
+- Choose the appropriate Python environment. For first year DTU students, select the environment named `Base(Python 3.12.XX)`.
+- If you do not see the correct environment follow :ref:`this <common-issues-fall25>` link to troubleshoot.
 
-**Week 2: Problem-Solving Strategies**
-- Monday 2:00 PM - 4:00 PM
-- Wednesday 10:00 AM - 12:00 PM
-- Friday 1:00 PM - 3:00 PM
+**Step 3: Write and Run Code Cells**
+- If you are already in a notebook from a course, navigate to the top middle and press `Run All`. 
+- Otherwise click on the first cell and type your Python code.
+- To run a cell, press `Shift + Enter` or click the "Run" button in the toolbar.
 
-What You'll Learn
------------------
+**Step 4: Writing Text**
+- The jupyter notebook has Markdown cells which are used to write text.
+- To create a markdown cell hover below an existing cell and click the `Markdown` button.
+- To write mathematical equations and so on you can use the Markdown or LaTeX syntax.
+- To render the markdown cell, press `Shift + Enter` just as a code cell.
 
-- Interactive coding sessions with real-world examples
-- Beginner-friendly approach to complex problems
-- Hands-on problem solving techniques
-- Direct Q&A with experienced instructors
-- Best practices for debugging and testing
-
-Registration
-------------
-
-Spaces are limited! Register through our Discord server or visit us during office hours. Join us for an engaging learning experience that will enhance your programming skills and prepare you for your coursework.
-
-**Location:** DTU Building 324, Room 101
-**Contact:** python-support@dtu.dk
