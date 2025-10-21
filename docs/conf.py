@@ -27,7 +27,7 @@ sys.path.insert(1, str(_cwd))
 from ps_modules.create_timetabs import create_time_table
 from ps_modules.mailto_role import escape_backslash, mailto_role
 from ps_modules.pageredirects import *
-from ps_modules.latest_news import generate_news_carousel
+from ps_modules.latest_news import create_news_carousel
 
 if sys.version_info >= (3, 11):
     import tomllib as toml
@@ -702,4 +702,4 @@ def setup(app):
 
     app.connect("build-finished", install_survey)
 
-    app.connect("setup_latest_news", setup_latest_news)
+    app.connect("builder-inited", create_news_carousel)

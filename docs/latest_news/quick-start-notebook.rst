@@ -1,7 +1,7 @@
 Quick Start Jupyter Notebook
 =================================================
 
-:date: 2025-10-21
+:date: 21-10-2025
 :tags: python, jupyter, programming, notebook, sympy
 
 Description

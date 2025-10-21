@@ -1,6 +1,6 @@
 .. meta::
    :title: Current Common Issues - Fall 2025
-   :date: 2025-10-21
+   :date: 21-10-2025
    :tags: installation, python, vscode, error, kernel
 
 
