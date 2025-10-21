@@ -198,6 +198,13 @@ def get_all_tags(news_dir_path):
     return sorted(list(all_tags))
 
 
+def _indent_content(content, level):
+    """Indents each non-empty line of the content by the given level."""
+    return "\n".join(
+        [" " * level + line if line.strip() else "" for line in content.splitlines()]
+    )
+
+
 def generate_tabbed_carousel_rst(news_dir_path):
     """Generate RST content for a tabbed carousel interface."""
     # Get all tags
@@ -212,10 +219,13 @@ def generate_tabbed_carousel_rst(news_dir_path):
     # Add "All" tab first
     all_posts = get_latest_news_posts(news_dir_path, max_posts=10)
     carousel_content = generate_carousel_rst(all_posts)
+    indented_carousel_content = _indent_content(
+        carousel_content, 6
+    )  # 3 for tab-item + 3 for its content
     rst_content += f"""   .. tab-item:: All
       :sync: all
 
-{carousel_content}
+{indented_carousel_content}
 
 """
 
@@ -224,10 +234,13 @@ def generate_tabbed_carousel_rst(news_dir_path):
         tag_posts = get_latest_news_posts(news_dir_path, tag_filter=tag, max_posts=10)
         if tag_posts:  # Only add tab if there are posts with this tag
             carousel_content = generate_carousel_rst(tag_posts)
+            indented_carousel_content = _indent_content(
+                carousel_content, 6
+            )  # 3 for tab-item + 3 for its content
             rst_content += f"""   .. tab-item:: {tag.title()}
       :sync: {tag}
 
-{carousel_content}
+{indented_carousel_content}
 
 """
 
@@ -252,8 +265,7 @@ def generate_carousel_rst(posts, include_header=False):
 
 """
 
-    rst_content += """
-.. card-carousel:: 3
+    rst_content += """.. card-carousel:: 3
 
 """
 
@@ -295,6 +307,16 @@ def create_news_carousel(app):
         # Get the source directory
         src_dir = Path(app.srcdir)
         news_dir = src_dir / "latest_news"
+        output_dir = src_dir  # Write directly to src_dir (docs)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_file = output_dir / "latest_news_carousel.rst"
+
+        # Generate the tabbed carousel RST content
+        generated_content = generate_tabbed_carousel_rst(news_dir)
+
+        # Write the content to the output file
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(generated_content)
 
     except Exception as e:
         print(f"Error creating news carousel: {e}")
@@ -303,4 +325,3 @@ def create_news_carousel(app):
 def setup_latest_news(app):
     """Setup the latest news carousel for Sphinx."""
     app.connect("builder-inited", create_news_carousel)
-
