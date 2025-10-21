@@ -2,7 +2,6 @@ Data Visualization with Matplotlib: Chart Creation Workshop
 ===========================================================
 
 :date: 2024-09-19
-:image: ../_static/matplotlib_logo.svg
 :tags: workshops, visualization, matplotlib, data-science
 
 Description

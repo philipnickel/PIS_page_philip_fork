@@ -2,7 +2,6 @@ Python Environment Management: Conda vs Virtual Environments
 =============================================================
 
 :date: 2024-09-18
-:image: ../_static/conda_logo.svg
 :tags: environment, conda, virtual-env, guide
 
 Description

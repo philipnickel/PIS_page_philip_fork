@@ -2,7 +2,6 @@ Python Installation Guide: Anaconda Distribution
 =================================================
 
 :date: 2024-09-25
-:image: ../_static/anaconda_logo.svg
 :tags: installation, python, guide
 
 Description

@@ -1,4 +1,4 @@
-Workshop Updates: Computational Thinking Sessions
+MAIN TITLE 
 =================================================
 
 :date: 2024-09-26
@@ -6,8 +6,10 @@ Workshop Updates: Computational Thinking Sessions
 
 Description
 -----------
+Here goes a description of the news item.
 
-We're excited to announce our upcoming computational thinking workshops starting this week! These hands-on sessions are designed to help students develop essential programming skills through interactive coding sessions and real-world problem solving.
+
+Below is the body of the page 
 
 Workshop Schedule
 -----------------

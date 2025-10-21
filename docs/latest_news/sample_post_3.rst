@@ -2,7 +2,6 @@ Discord Community: Join 500+ Students Getting Python Help
 ==========================================================
 
 :date: 2024-09-24
-:image: ../_static/discord_blurple_CMYK.png
 :tags: community, discord, support
 
 Description
