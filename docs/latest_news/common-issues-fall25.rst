@@ -1,7 +1,7 @@
 .. meta::
-   :title: Current Common Issues - Fall 2025
-   :date: 21-10-2025
-   :tags: common issues 
+  :title: Current Common Issues - Fall 2025
+  :date: 21-10-2025
+  :keywords: common issues 
 
 
 

@@ -1,11 +1,17 @@
-Quick Start Jupyter Notebook
-=================================================
+.. meta::
+   :title: Quick Start Jupyter Notebook
+   :date: 21-10-2025
+   :keywords: installation, python, vscode
 
-:date: 21-10-2025
-:tags: python, jupyter 
+
+Quick Start Jupyter Notebook
+-------------------------------------
+
+
 
 Description
------------
+-----------------------------------
+
 
 This page gives a quick start guide to using Jupyter Notebooks for programming in Python, including installation instructions and basic usage tips. 
 
@@ -20,7 +26,7 @@ Guide
 **Step 2: Select Python Kernel**
 - In the top right corner of the notebook, click on "Select Kernel".
 - Choose the appropriate Python environment. For first year DTU students, select the environment named `Base(Python 3.12.XX)`.
-- If you do not see the correct environment follow :ref:`this <common-issues-fall25>` link to troubleshoot.
+- If you do not see the correct environment follow ref`this <common-issues-fall25>` link to troubleshoot.
 
 **Step 3: Write and Run Code Cells**
 - If you are already in a notebook from a course, navigate to the top middle and press `Run All`. 

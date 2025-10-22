@@ -44,7 +44,7 @@
 .. raw:: html
    :file: html/hero.html
 
-.. include:: latest_news/generated_latest_news_carousel.rst
+.. include:: _rst_includes/latest_news.rst
 
 .. _reach-us-reference:
 
