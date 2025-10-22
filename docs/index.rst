@@ -44,6 +44,10 @@
 .. raw:: html
    :file: html/hero.html
 
+--------
+Latest news
+--------
+
 .. include:: _rst_includes/latest_news.rst
 
 .. _reach-us-reference:

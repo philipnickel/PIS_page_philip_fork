@@ -133,11 +133,12 @@ def _render_carousel(posts: List[article]) -> str:
       :link-type: doc
       :shadow: none
 
+      :fas:`calendar-alt` {date_disp.strftime('%d %b %Y')}
+
       **{p.title}**
 
       {p.description}
 
-      :fas:`calendar-alt` {date_disp.strftime('%d %b %Y')}
 """
         out.append(card.rstrip() + "\n")
     return "\n".join(out).rstrip() + "\n"
