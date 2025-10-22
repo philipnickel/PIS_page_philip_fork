@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import os
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -36,14 +37,28 @@ def _first_paragraph(tree: nodes.document) -> Optional[str]:
     return p.astext().strip() if p else None
 
 
-def _parse_post(path: Path) -> Optional[article]:
+def _parse_post(app: object, path: Path) -> Optional[article]:
 
-    tree = publish_doctree(path.read_text(encoding="utf-8"))
+    env = app.env
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+    # get the directory of the path
+    dir = os.path.dirname(path)
+    # change the working directory
+    cwd = os.getcwd()
+    os.chdir(dir)
+    # now publish the doctree
+    tree = publish_doctree(text, settings_overrides={"env": env})
+    # and change back the working directory
+    os.chdir(cwd)
+
     meta = _meta_from_doctree(tree)
 
     title = meta.get("title")
 
     date_raw = meta.get("date", "")
+    if not date_raw:
+        return None
     date = datetime.strptime(date_raw, "%d-%m-%Y")
 
     keywords_str = meta.get("keywords", "")
@@ -62,7 +77,10 @@ def _parse_post(path: Path) -> Optional[article]:
 
 # ------------------------------ Collection ------------------------------------
 def _collect_posts(
-    dir_path: Path, tag_filter: Optional[str] = None, max_posts: Optional[int] = None
+    app: object,
+    dir_path: Path,
+    tag_filter: Optional[str] = None,
+    max_posts: Optional[int] = None,
 ) -> List[article]:
     if not dir_path.exists():
         print(f"[warn] directory not found: {dir_path}", file=sys.stderr)
@@ -74,9 +92,7 @@ def _collect_posts(
     for p in sorted(dir_path.glob("*.rst")):
         # skip non-posts or templates
         # if p.name.startswith("template"):
-        #    continue
-
-        post = _parse_post(p)
+        post = _parse_post(app, p)
         if not post:
             continue
 
@@ -89,10 +105,10 @@ def _collect_posts(
     return posts[:max_posts] if max_posts else posts
 
 
-def _all_keywords(dir_path: Path) -> List[str]:
+def _all_keywords(app: object, dir_path: Path) -> List[str]:
     tags = set()
     for p in dir_path.glob("*.rst"):
-        post = _parse_post(p)
+        post = _parse_post(app, p)
         if post:
             tags.update(post.keywords)
     return sorted(tags, key=str.lower)
@@ -129,9 +145,9 @@ def _render_carousel(posts: List[article]) -> str:
     return "\n".join(out).rstrip() + "\n"
 
 
-def _render_tabset(dir_path: Path, max_posts: int = 10) -> str:
+def _render_tabset(app: object, dir_path: Path, max_posts: int = 10) -> str:
     # "All" tab
-    all_posts = _collect_posts(dir_path, max_posts=max_posts)
+    all_posts = _collect_posts(app, dir_path, max_posts=max_posts)
     all_carousel = _render_carousel(all_posts)
 
     rst = """.. tab-set::
@@ -146,9 +162,9 @@ def _render_tabset(dir_path: Path, max_posts: int = 10) -> str:
 """
 
     # Per-tag tabs
-    for keyword in _all_keywords(dir_path):
+    for keyword in _all_keywords(app, dir_path):
         keyword_posts = _collect_posts(
-            dir_path, tag_filter=keyword, max_posts=max_posts
+            app, dir_path, tag_filter=keyword, max_posts=max_posts
         )
         if not keyword_posts:
             continue
@@ -168,6 +184,8 @@ def create_news_carousel(app):
         src_dir = Path(app.srcdir)
         news_dir = src_dir / "latest_news"
         out_file = news_dir / "generated_latest_news_carousel.rst"
-        out_file.write_text(_render_tabset(news_dir, max_posts=10), encoding="utf-8")
+        out_file.write_text(
+            _render_tabset(app, news_dir, max_posts=10), encoding="utf-8"
+        )
     except Exception as e:
         print(f"[error] create_news_carousel: {e}", file=sys.stderr)

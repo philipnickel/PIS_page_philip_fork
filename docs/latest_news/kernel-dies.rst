@@ -2,7 +2,7 @@ Kernel Has Died
 ==========================================================
 
 :date: 21-10-2025
-:tags: kernel, python, vscode, jupyter
+:tags: python, vscode, jupyter
 
 Description
 -----------
