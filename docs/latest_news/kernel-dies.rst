@@ -1,12 +1,12 @@
 .. meta::
   :title: Kernel Has Died
   :date: 21-10-2025
-  :keywords: python, vscode, jupyter
+  :keywords: vscode, jupyter notebook
 
 
 
 Kernel Has Died
--------------------------------------
+====================================
 
 Description
 -------------------------------------
@@ -34,14 +34,12 @@ Copy and paste the following line of code into your terminal and press :kbd:`Ent
       conda create --name DTU python={{ python_version_recommended }} dtumathtools pandas scipy statsmodels uncertainties -y
 
 
-incluede this  _rst_includes/tip-copy.rst
-
  
 **Step 3: Select the new environment as your Kernel in VS Code**
 Open VS Code and select `DTU(Python 3.12.XX)` as your Kernel.
 
 
 
-note
-    If you need any help with how to select the kernel in VS Code or other related issues, please refer to the guide ref`here <jupyter-notebooks>`.
+.. note::
+  If you need any help with how to select the kernel in VS Code or other related issues, please refer to the guide ref`here <jupyter-notebooks>`.
 

@@ -1,13 +1,11 @@
 .. meta::
    :title: Quick Start Jupyter Notebook
    :date: 21-10-2025
-   :keywords: installation, python, vscode
+   :keywords: vscode, jupyter notebook 
 
 
 Quick Start Jupyter Notebook
--------------------------------------
-
-
+===================================
 
 Description
 -----------------------------------

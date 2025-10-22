@@ -3,18 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
-import warnings
 from textwrap import shorten
-
-# -- minimal dependency: docutils only
+from typing import Iterable, List, Dict, Optional, Tuple
+import logging
 from docutils import nodes
 from docutils.core import publish_doctree
 
 
-# ------------------------------ Models ----------------------------------------
-@dataclass
-class article:
+# ------------------------------ Model -----------------------------------------
+@dataclass(frozen=True)
+class Article:
     filename: str
     title: str
     date: datetime
@@ -26,157 +24,134 @@ class article:
         return self.date.strftime("%d %b %Y")
 
     def summary(self, width: int = 140) -> str:
-        placeholder = "..."
-        return shorten(self.description, width=width, placeholder=placeholder)
+        return shorten(self.description, width=width, placeholder="...")
+
+    @property
+    def link(self) -> str:
+        # assumes files live in latest_news/
+        return f"latest_news/{self.filename}"
 
 
-def _meta_from_doctree(tree: nodes.document) -> Dict[str, str]:
-    meta: Dict[str, str] = {}
-    for m in tree.findall(nodes.meta):
-        name = (m.get("name") or "").strip()
-        value = (m.get("content") or "").strip()
-        if name and value:
-            meta[name.lower()] = value
-    return meta
+# ------------------------------ Parsing ---------------------------------------
 
 
-def _parse_article(path: Path) -> article:
-    with open(path, "r", encoding="utf-8") as f:
-        text = f.read()
+def _first_nonempty_paragraph(doc: nodes.document) -> Optional[str]:
+    p = doc.next_node(nodes.paragraph)
+    return p.astext().strip() if p else None
 
-    # now publish the doctree
-    tree = publish_doctree(text)
 
-    meta = _meta_from_doctree(tree)
+def _meta(doc: nodes.document) -> Dict[str, str]:
+    out: Dict[str, str] = {}
+    for m in doc.findall(nodes.meta):
+        name = (m.get("name") or "").strip().lower()
+        val = (m.get("content") or "").strip()
+        if name and val:
+            out[name] = val
+    return out
+
+
+def parse_article(path: Path) -> Article:
+    doc = publish_doctree(path.read_text(encoding="utf-8"))
+    meta = _meta(doc)
 
     title = meta.get("title")
 
-    date_raw = meta.get("date", "")
+    date_raw = meta.get("date")
 
     date = datetime.strptime(date_raw, "%d-%m-%Y")
 
-    keywords_str = meta.get("keywords", "")
-    keywords = [t.strip() for t in keywords_str.split(",") if t.strip()]
+    kw = [t.strip() for t in (meta.get("keywords", "")).split(",") if t.strip()]
 
-    p = tree.next_node(nodes.paragraph)
-    description = p.astext().strip() if p else None
+    desc = _first_nonempty_paragraph(doc) or ""
 
-    return article(
-        filename=path.stem,
-        title=title,
-        date=date,
-        keywords=keywords,
-        description=description,
+    return Article(
+        filename=path.stem, title=title, date=date, keywords=kw, description=desc
     )
 
 
-# ------------------------------ Collection ------------------------------------
-
-
-def _all_keywords(dir_path: Path) -> List[str]:
+# ------------------------------ Indexing (single pass) ------------------------
+def build_index(
+    dir_path: Path, keyword_filter: Optional[str] = None
+) -> Tuple[List[Article], List[str]]:
+    """Scan once; return (articles_sorted_desc_by_date, all_keywords_sorted)."""
+    articles: List[Article] = []
     keywords_set = set()
 
-    for rst_path in sorted(dir_path.glob("*.rst")):
-        a = _parse_article(rst_path)
+    for p in sorted(dir_path.glob("*.rst")):
+        try:
+            a = parse_article(p)
+        except Exception as e:
+            logging.warning("[Latest News] Skipping %s: %s", p, e)
+            continue
+
+        if (keyword_filter is None) or (keyword_filter in a.keywords):
+            articles.append(a)
 
         for kw in a.keywords:
             keywords_set.add(kw)
 
-    return sorted(keywords_set)
-
-
-def _collect_articles(
-    dir_path: Path,
-    keyword_filter: Optional[str] = None,
-) -> List[article]:
-    results: List[article] = []
-
-    for rst_path in sorted(dir_path.glob("*.rst")):
-        try:
-            a = _parse_article(rst_path)
-        except Exception as e:
-            warnings.warn(
-                f"[Latest News] Skipping invalid or incomplete post: {rst_path}: {e}"
-            )
-            continue
-
-        if keyword_filter:
-            if keyword_filter in a.keywords:
-                results.append(a)
-        else:
-            results.append(a)
-
-    # show newest first
-    results.sort(key=lambda x: x.date, reverse=True)
-    return results
+    articles.sort(key=lambda a: a.date, reverse=True)
+    return articles, sorted(keywords_set)
 
 
 # ------------------------------ Rendering -------------------------------------
-def _indent(text: str, n: int) -> str:
+def _indent(block: str, n: int) -> str:
     pad = " " * n
-    return "\n".join((pad + line) if line.strip() else "" for line in text.splitlines())
+    return "\n".join(
+        (pad + line) if line.strip() else "" for line in block.splitlines()
+    )
 
 
-def _render_carousel(posts: List[article]) -> str:
+def render_carousel(posts: Iterable[Article]) -> str:
+    posts = list(posts)
     if not posts:
         return ".. note::\n   No news posts available.\n\n"
 
-    # sphinx-design card carousel (3 columns)
-    out = [".. card-carousel:: 3", ""]
-    for p in posts:
-        # link to the doc by name (assumes each file is a doc in latest_news/)
-        link = f"latest_news/{p.filename}"
-        date_disp = p.date
-
-        card = f"""   .. card::
-      :link: {link}
+    lines = [".. card-carousel:: 3", ""]
+    for a in posts:
+        lines.append(
+            f"""   .. card::
+      :link: {a.link}
       :link-type: doc
       :shadow: none
 
-      :fas:`calendar-alt` {date_disp.strftime('%d %b %Y')}
+      :fas:`calendar-alt` {a.datef}
 
-      **{p.title}**
+      **{a.title}**
 
-      {p.description}
+      {a.description}
 
-"""
-        out.append(card.rstrip() + "\n")
-    return "\n".join(out).rstrip() + "\n"
+""".rstrip()
+        )
+        lines.append("")  # blank line between cards
+    return "\n".join(lines).rstrip() + "\n"
 
 
-def _render_tabset(dir_path: Path) -> str:
-    all_posts = _collect_articles(dir_path)
-    all_carousel = _render_carousel(all_posts)
+def render_tabset(dir_path: Path) -> str:
+    all_posts, all_keywords = build_index(dir_path, keyword_filter=None)
+    out = [".. tab-set::", "", "   .. tab-item:: All", "      :selected:", ""]
+    out.append(_indent(render_carousel(all_posts), 6))
 
-    rst = ".. tab-set::\n\n"
-    rst += (
-        "   .. tab-item:: All\n" "      :selected:\n\n" f"{_indent(all_carousel, 6)}\n"
-    )
+    # render each keyword tab with filtered posts without re-parsing
+    # (we already have all posts; just filter in-memory)
+    for kw in all_keywords:
+        kw_posts = [a for a in all_posts if kw in a.keywords]
+        out.extend([f"   .. tab-item:: {kw.title()}", ""])
+        out.append(_indent(render_carousel(kw_posts), 6))
 
-    for keyword in _all_keywords(dir_path):
-        keyword_posts = _collect_articles(dir_path, keyword)
-        carousel = _render_carousel(keyword_posts)
-        rst += f"   .. tab-item:: {keyword.title()}\n\n" f"{_indent(carousel, 6)}\n"
-
-    return rst
+    return "\n".join(out) + "\n"
 
 
 # ------------------------------ Sphinx hook -----------------------------------
-
-
-def create_news_carousel(app):
+def create_news_carousel(app) -> None:
     try:
-        src_dir = Path(app.srcdir)
+        src = Path(app.srcdir)
+        news_dir = src / "latest_news"
+        out_dir = src / "_rst_includes"
+        out_dir.mkdir(parents=True, exist_ok=True)
 
-        news_dir = src_dir / "latest_news"
-        out_dir = src_dir / "_rst_includes"
-
-        out_file = out_dir / "latest_news.rst"
-
-        content = _render_tabset(news_dir)
-
-        with open(out_file, "w") as f:
-            f.write(content)
-
+        (out_dir / "latest_news.rst").write_text(
+            render_tabset(news_dir), encoding="utf-8"
+        )
     except Exception as e:
-        warnings.warn(f"[Latest News] Failed to create news carousel: {e}")
+        logging.warning("[Latest News] Failed to create news carousel: %s", e)
