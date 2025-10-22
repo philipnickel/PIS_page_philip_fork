@@ -23,3 +23,5 @@ docs/os/gifs/hashes.yml
 # course environment install pages
 docs/environments/course/*.rst
 
+# Generated latest news file 
+docs/latest_news/generated_latest_news_carousel.rst

@@ -1,0 +1,1119 @@
+<!-- _templates/layout.html -->
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Internal information (Supporters)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/twemoji.css?v=2199c511" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colors.css?v=ca198985" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome6.css?v=dfa9907d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=63e98db3" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/bannerStyles.css?v=5d5deea9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/questionairStyles.css?v=7dfcb917" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/popupStyles.css?v=0bcfa664" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
+    <script src="../_static/twemoji.js?v=a4381b3f"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'internal/index';</script>
+    <script src="../_static/js/external_tab.js?v=e06e64a3"></script>
+    <script src="../_static/js/custom.js?v=9293e9f5"></script>
+    <script src="../_static/js/auto-open-dropdown-link.js?v=4121caed"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="../index.html" class="logo-container">
+    <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../commonproblems/index.html">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="../index.html" class="logo-container">
+    <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../learn-more/index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../commonproblems/index.html">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/h8EVaV9ShP" title="Chat with us on Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Chat with us on Discord</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:pythonsupport@dtu.dk?subject=Python%20Support%20Request%20-%20%5Breplace%20with%20problem%5D&body=%0A-%20Relevant%20course%20number%20%28if%20applicable%29%3A%0A%0A-%20Description%20of%20the%20issue%20experienced%3A%0A%0A-%20Error%20messages%20%28if%20any%29%3A%0A%0A-%20Which%20versions%20of%20Python%20and/or%20packages%20do%20you%20have%3A%0A%0AKind%20regards%0A%3Cinsert%20name%3E%0A" title="Contact us by mail" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-envelope shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Contact us by mail</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../install/python.html">Install Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install/windows/automated.html"><span class="fab fa-windows"></span>  — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/windows/manual.html"><span class="fab fa-windows"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/macos/automated.html"><span class="fab fa-apple"></span> — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/macos/manual.html"><span class="fab fa-apple"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/linux/manual.html"><span class="fab fa-linux"></span> — Manual Installation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../learn-more/vscode/index.html">Visual Studio Code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/vscode/python-script.html">Python files (.py)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/vscode/jupyter-notebooks.html">Jupyter Notebooks (.ipynb)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/index.html">Guides for DTU Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../course/01001.html">Mathematics 1a 01001/01003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/01002.html">Mathematics 1b 01002/01004</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/02002.html">Computer Programming 02002/02003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/02402.html">Statistics 02402</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/02461.html">Introduction to Intelligent Systems 02461</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course/10060.html">Physics 10060</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../learn-more/index.html">Learn more</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/terminal.html">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learn-more/idle.html">IDLE (only for 02002/02003)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../learn-more/packages-and-environments/index.html">Packages and Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../learn-more/packages-and-environments/packages.html">Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learn-more/packages-and-environments/environments.html">Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learn-more/packages-and-environments/pip.html">pip</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../videos/index.html">Video Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uninstall/index.html">Uninstall Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commonproblems/index.html">Common Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/dtudk/pythonsupport-page" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/internal/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Internal information (Supporters)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interacting-with-students">Interacting with students</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-questions-when-mailing-chatting-with-questioners">Opening questions when mailing/chatting with questioners</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interacting-with-each-other">Interacting with each other</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord">Discord</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ticket-system-rt">Ticket system (RT)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-sphinx"><span class="xref std std-ref">Customizing Sphinx</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piwik-setup">Piwik setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panopto-tutorial"><span class="xref std std-ref">Panopto tutorial</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises"><span class="xref std std-ref">Exercises</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-documentation"><span class="xref std std-ref">Editing documentation</span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="internal-information-supporters">
+<span id="internal"></span><h1>Internal information (Supporters)<a class="headerlink" href="#internal-information-supporters" title="Link to this heading">#</a></h1>
+<p>This page is intended for the hired supporters and will be used to share information
+and new technologies we (the Python support) will look into.
+Thus our knowledge will be expanded as new things surface.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We will share internal documents with you hosted
+<a class="extlink-full-link reference external" href="https://www.student.dtu.dk/~nicpa/pythonsupport/internal-files">here</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please come with suggestions for how we should do stuff!</p>
+</div>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#interacting-with-students" id="id1">Interacting with students</a></p></li>
+<li><p><a class="reference internal" href="#opening-questions-when-mailing-chatting-with-questioners" id="id2">Opening questions when mailing/chatting with questioners</a></p></li>
+<li><p><a class="reference internal" href="#interacting-with-each-other" id="id3">Interacting with each other</a></p></li>
+<li><p><a class="reference internal" href="#discord" id="id4">Discord</a></p></li>
+<li><p><a class="reference internal" href="#ticket-system-rt" id="id5">Ticket system (RT)</a></p></li>
+<li><p><a class="reference internal" href="#customizing-sphinx" id="id6"><a class="reference internal" href="sphinx.html#internal-sphinx"><span class="std std-ref">Customizing Sphinx</span></a></a></p></li>
+<li><p><a class="reference internal" href="#piwik-setup" id="id7">Piwik setup</a></p></li>
+<li><p><a class="reference internal" href="#panopto-tutorial" id="id8"><a class="reference internal" href="panopto.html#internal-panopto"><span class="std std-ref">Panopto tutorial</span></a></a></p></li>
+<li><p><a class="reference internal" href="#exercises" id="id9"><a class="reference internal" href="exercises.html#internal-exercises"><span class="std std-ref">Exercises</span></a></a></p></li>
+<li><p><a class="reference internal" href="#editing-documentation" id="id10"><a class="reference internal" href="documentation.html#internal-documentation"><span class="std std-ref">Editing documentation</span></a></a></p></li>
+</ul>
+</nav>
+<section id="interacting-with-students">
+<span id="internal-com-students"></span><h2>Interacting with students<a class="headerlink" href="#interacting-with-students" title="Link to this heading">#</a></h2>
+<p>Students will arrive with a variety of backgrounds. Some are very interested
+in programming, while others are not interested, <em>at all</em>, in the inner workings
+of Python and want to be able to attend courses.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Sometimes you will get frustrated that your message did not come across,
+or that the questioner keeps misunderstanding what you asked them to do.
+This is natural. There is no other way but to repeat the entire procedure, in
+greater detail, and politely explain them why things may go wrong. <strong>Patience!</strong></p>
+</div>
+<p>Our goal is to support both ends of the student spectrum.
+Information overload can be a problem for new students as there is already
+enough on the plate. It is imperative that information is given at the level
+of the student and at the pace that might be interesting for the student.
+Always ask if they want more information, before recommending best practices for
+something they do not really care for.</p>
+<p>If it seems that the student <em>just</em> want a working installation, then opt in to
+aid with few, if any, side steps.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Engaging through online channels may, sometimes, spur comments that are
+inappropriate.</p>
+<p>It is important that you do not put anything personal into such comments.
+It is generally a sign of frustration! So take 2 min off the screen to
+cool down. And then return with a polite and firm message. Something
+like this could be used:</p>
+<blockquote>
+<div><p>Please keep the tone polite and open. We will not accept any form of
+harassment and/or bullying through our channels.
+We are trying to aid to the best of our abilities, and sometimes
+we encounter problems we have never experienced before.</p>
+</div></blockquote>
+<p><em>search for ‘handle inappropriate comments’ and you’ll find plenty of useful
+content</em></p>
+<p>Then wait a bit more to engage further with the questioner to ensure the
+message came across.
+If you, at <strong>any</strong> time feel uncomfortable, let us know immediately. It shall not,
+and will not be tolerated!</p>
+<p>Please, openly, discuss this with the team. We are all here for each other! <span class="fas fa-people-group"></span></p>
+</div>
+<p>Questioners will undoubtedly ask questions outside our scope.
+The best approach would be to <em>guess</em> who/where the question could be answered.
+For instance if the question is related to a Python programming problem, one could
+close it like this:</p>
+<blockquote>
+<div><p>We, the Python installation support, cannot engage in support on Python
+programming problems. If this is related to a DTU course, we have to refer
+you to the course teaching assistants, or the teacher.</p>
+<p>Otherwise, you can ask your question to other students in the #general
+channel.</p>
+<p>Thanks for your understanding!</p>
+</div></blockquote>
+<dl>
+<dt>General IT questions</dt><dd><div class="line-block">
+<div class="line">If they have questions related to Wireless, getting Multi-Factor-Authentication
+(MFA) to work, VPN, etc. they should ask AIT.</div>
+<div class="line">Mail: <a class="extlink-mail reference external" href="mailto:itsupport&#37;&#52;&#48;student&#46;dtu&#46;dk">itsupport<span>&#64;</span>student<span>&#46;</span>dtu<span>&#46;</span>dk</a></div>
+<div class="line">Their phone number is: +45 452 55555.</div>
+<div class="line">Located in building 189</div>
+<div class="line">Other information can be found <a class="extlink-full-link reference external" href="https://www.inside.dtu.dk/en/undervisning/faglig/it-systemer-og-vaerktoejer">here</a>.</div>
+</div>
+</dd>
+<dt>DTU Learn</dt><dd><p>Go here: <a class="extlink-full-link reference external" href="https://learnsupport.dtu.dk">https://learnsupport.dtu.dk</a></p>
+</dd>
+<dt>Counseling for students:</dt><dd><p>Go here: <a class="extlink-full-link reference external" href="https://www.dtu.dk/uddannelse/vejledning/studievejledningen">https://www.dtu.dk/uddannelse/vejledning/studievejledningen</a></p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Professional Secrecy</strong></p>
+<p>While working with the students, you might see and learn about things
+not directly relevant to your job. As an employee of DTU, you are obliged to keep that
+knowledge secret.</p>
+</div>
+</section>
+<section id="opening-questions-when-mailing-chatting-with-questioners">
+<span id="internal-opening-questions"></span><h2>Opening questions when mailing/chatting with questioners<a class="headerlink" href="#opening-questions-when-mailing-chatting-with-questioners" title="Link to this heading">#</a></h2>
+<p>Here is a short item list of questions that may be useful for asking them.
+They are in code blocks so you can easily copy paste them directly into
+the Discord message/email system.</p>
+<p>Quite often we tend to suggest solutions before we know the exact problem.
+It can be very useful to get some basic information about the system, before suggesting
+workarounds.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>Which<span class="w"> </span>operating<span class="w"> </span>system,<span class="w"> </span>Windows,<span class="w"> </span>MacOS,<span class="w"> </span>Linux?
+-<span class="w"> </span>How<span class="w"> </span>did<span class="w"> </span>you<span class="w"> </span>install<span class="w"> </span>Python?<span class="w"> </span>App-store,<span class="w"> </span>download<span class="w"> </span>link,<span class="w"> </span>anaconda,<span class="w"> </span>other?
+-<span class="w"> </span>If<span class="w"> </span>Windows,<span class="w"> </span>did<span class="w"> </span>you<span class="w"> </span>remember<span class="w"> </span>to<span class="w"> </span>check<span class="w"> </span>the<span class="w"> </span><span class="sb">``</span>Add<span class="w"> </span>...<span class="w"> </span>to<span class="w"> </span>PATH<span class="sb">``</span><span class="w"> </span>box?<span class="w"> </span>If<span class="w"> </span>unsure,<span class="w"> </span>reinstall<span class="w"> </span>using<span class="w"> </span>App-store.
+-<span class="w"> </span>Are<span class="w"> </span>you<span class="w"> </span>using<span class="w"> </span>virtual<span class="w"> </span>environments?<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>not<span class="w"> </span>sure,<span class="w"> </span>probably<span class="w"> </span>not.<span class="w"> </span>:<span class="o">)</span>
+-<span class="w"> </span>Are<span class="w"> </span>you<span class="w"> </span>using<span class="w"> </span>multiple<span class="w"> </span>Python<span class="w"> </span>versions<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>machine?<span class="w"> </span>Can<span class="w"> </span>cause<span class="w"> </span>conflicts.
+</pre></div>
+</div>
+</section>
+<section id="interacting-with-each-other">
+<span id="internal-com-other"></span><h2>Interacting with each other<a class="headerlink" href="#interacting-with-each-other" title="Link to this heading">#</a></h2>
+<p>Since we all have a variety of backgrounds, our ways of solving problems
+will be a diverse set of methods.</p>
+<p>Always respect your co-workers solution methods, even though you would prefer
+other methods.</p>
+<p>This is not to say that we can not learn from each other, but doing so should be done
+with respect, and tolerance towards disagreements.</p>
+<p>It is vital we also keep a nice and healthy internal tone.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Try not to engage in other supporters threads/tickets.</p>
+<p>If you really do think engaging would be a good idea, always, <strong>always</strong>,
+ask the supporter through private channels (RT: comment, Discord: &#64;&lt;username&gt;)
+before engaging with the questioner.</p>
+<p>Secondly, you will sometimes see a thread/ticket open from another supporter.
+This could be due to their shift was over, or that they had some other things to
+attend to. If a lot of time has passed, you can <em>take over</em> the ticket/question.
+Please always remember to notify the original supporter that you took over the ticket.
+Something like this could be used:</p>
+<blockquote>
+<div><p>I saw that your time was limited on ticket/question ####, I took the liberty
+of continuing the ticket. Feel free to let me know if I should leave it to you,
+or if there is anything else you may find important for this question! Thanks!</p>
+</div></blockquote>
+</div>
+</section>
+<section id="discord">
+<span id="internal-discord"></span><h2>Discord<a class="headerlink" href="#discord" title="Link to this heading">#</a></h2>
+<p>Our Discord server can be found <a class="reference external" href="https://discord.com/channels/1138793943526539266/1138793944247980124">here</a>.
+Once you have joined, ping <code class="docutils literal notranslate"><span class="pre">&#64;nicpa</span></code> and ask for <code class="docutils literal notranslate"><span class="pre">supporter</span></code> role.</p>
+<p>We have a separate category (<code class="docutils literal notranslate"><span class="pre">support-internal</span></code>) where only persons in the
+<code class="docutils literal notranslate"><span class="pre">&#64;supporter</span></code> role can see stuff (note the <span class="fas fa-lock"></span> icon on the channel names).
+Here you can share experiences, or consult your colleagues, <em>without</em> anybody watching.</p>
+<p>If we need additional channels, we discuss it there!</p>
+<p>One can choose which Channels one is subscribed to. Once subscribed one will get
+notifications through Discord when a new posts has been made.
+Go to the <code class="docutils literal notranslate"><span class="pre">Browse</span> <span class="pre">Channels</span></code> in the top-left corner, and check mark the <code class="docutils literal notranslate"><span class="pre">Follow</span> <span class="pre">Category</span></code>
+in the <code class="docutils literal notranslate"><span class="pre">support-internal</span></code>, <code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code>.</p>
+<p>Here is our current segmentation of the categories and channels on Discord:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">support-internal</span></code></dt><dd><p>No rules for this <em>private</em> channel, this is <strong>our</strong> space, and no other than the <code class="docutils literal notranslate"><span class="pre">&#64;supporter</span></code>
+role or <code class="docutils literal notranslate"><span class="pre">&#64;admin</span></code> can see what is happening there.</p>
+<p>There is a <code class="docutils literal notranslate"><span class="pre">teachers</span></code> channel that is also open for users with the <code class="docutils literal notranslate"><span class="pre">&#64;teacher</span></code> role.
+This is only for discussing things related to courses, or if teachers wants some information
+from us.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code></dt><dd><p>This will be our main working category for questions.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code> <span class="fas fa-arrow-right"></span> <code class="docutils literal notranslate"><span class="pre">questions</span></code></dt><dd><p>Main channel for new questions</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code> <span class="fas fa-arrow-right"></span> <code class="docutils literal notranslate"><span class="pre">tickets</span></code></dt><dd><div class="line-block">
+<div class="line">Opened tickets through our RT ticket system can be moved here for
+a more interactive discussion with the questioner.</div>
+<div class="line">Moving a ticket requires us to create a new <code class="docutils literal notranslate"><span class="pre">Thread</span></code> with the
+ticket number/ID as the thread name.
+This ensures we can correlate questions.</div>
+</div>
+<p><strong>Remember</strong>: If you solve the question on Discord, ensure you
+<em>resolve</em> the ticket in the RT system.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code> <span class="fas fa-arrow-right"></span> <code class="docutils literal notranslate"><span class="pre">forum-help</span></code></dt><dd><p><strong>Note</strong>: I do not (personally) have experience with the Forum in Discord,
+we’ll learn along the way if this is valuable, or whether it should be deleted.</p>
+<p><em>Your input is appreciated</em> <span class="far fa-smile"></span></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code> <span class="fas fa-arrow-right"></span> <code class="docutils literal notranslate"><span class="pre">homepage</span></code></dt><dd><p>Comments and improvements related to our homepage.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support</span> <span class="pre">questions</span></code> <span class="fas fa-arrow-right"></span> <span class="fas fa-volume-high"></span></dt><dd><p>These are voice channels we can join with other questioners to speak to each other,
+share screens etc. Much like Zoom/Teams/…</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">programming</span></code></dt><dd><p>These channels are not <em>our</em> space of work. They are meant to be a community
+that should be driven by students – <em>for</em> students.</p>
+<p>If you engage there, it will be as a <code class="docutils literal notranslate"><span class="pre">non</span> <span class="pre">supportor</span></code> role, and should be outside of
+your office hours. <span class="far fa-face-smile"></span></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dtu</span> <span class="pre">courses</span></code></dt><dd><p>Safe keeping, if courses want to have a separate channel under the Python support
+server. This is no enforcement from us, but we will let teachers know about the
+possibility as the Python support unit matures.</p>
+</dd>
+</dl>
+<p>When engaging with peoples questions, we should strive to keep things organized.
+This is no easy tasks since Discord does not implicitly enforce this.</p>
+<p>Our Discord guideline is:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+1. Check for non-closed threads (questions)</div>
+<p class="sd-card-text">When you open up Discord for the first time, first check for
+old threads/questions which have not been closed.</p>
+<p class="sd-card-text">Go through these first to determine if there is anything that
+you need to do there.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ"><span>https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+2. New questions</div>
+<ol class="arabic">
+<li><p class="sd-card-text">Determine if the question is appropriate for our support.</p></li>
+<li><p class="sd-card-text">Right click on the question, select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Thread</span></code>.</p></li>
+<li><p class="sd-card-text">Name the thread to something that can loosely describe the problem</p>
+<p class="sd-card-text"><em>the thread name can be changed later</em></p>
+</li>
+<li><p class="sd-card-text">Engage with the questioner on how to resolve the problem.</p>
+<p class="sd-card-text">Generally, additional details may be needed to help the student:</p>
+<ul class="simple">
+<li><p class="sd-card-text">which operating system and Python version</p></li>
+<li><p class="sd-card-text">how are they executing their commands, in an IDE terminal, or a <em>proper</em>
+terminal</p></li>
+<li><p class="sd-card-text">are they using <code class="docutils literal notranslate"><span class="pre">conda</span></code>, or a basic Python installation</p></li>
+<li><p class="sd-card-text">what is the exact error message</p></li>
+<li><p class="sd-card-text">quite often the entire workflow is important, errors may arise due to prior
+commands which can be difficult to know about if they <em>only</em> think the last
+command was the problematic one</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">When a question has been resolved, the thread should be closed.
+Either:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Right click the thread in the channel pane, and select <code class="docutils literal notranslate"><span class="pre">Close</span> <span class="pre">Thread</span></code>, or</p></li>
+<li><p class="sd-card-text">In the thread pane (located to the right), press the 3 dots <code class="docutils literal notranslate"><span class="pre">...</span></code> at the top and
+select <code class="docutils literal notranslate"><span class="pre">Close</span> <span class="pre">Thread</span></code>.</p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p class="sd-card-text">Try not to <code class="docutils literal notranslate"><span class="pre">Lock</span></code>, <code class="docutils literal notranslate"><span class="pre">Leave</span></code> or <code class="docutils literal notranslate"><span class="pre">Delete</span></code> threads.</p>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ"><span>https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ</span></a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ticket-system-rt">
+<span id="internal-rt"></span><h2>Ticket system (RT)<a class="headerlink" href="#ticket-system-rt" title="Link to this heading">#</a></h2>
+<p>The ticket system (RT) can be found <a class="reference external" href="https://pythonsupport-rt.dtu.dk/rt/">here</a>.</p>
+<p>Our guideline is:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+1. Check for non-closed tickets</div>
+<p class="sd-card-text">First check if there are any tickets open, where there
+is ongoing communication. If the other supporter is unavailable
+or have not answered for a long period, you can <em>take</em> the
+ticket and continue on it
+(please remember the note <a class="reference internal" href="#internal-com-other"><span class="std std-ref">here</span></a>).</p>
+<p class="sd-card-text">Quite often, tickets will go in limbo, i.e. the last message
+was from a supporter (us). If there has not been a reply
+for a day, or more, then we can ask whether the question got
+resolved, something like this:</p>
+<blockquote>
+<div><p class="sd-card-text">Hi,</p>
+<p class="sd-card-text">We hope our suggestions resolved your question?
+If not, please let us know, otherwise we will close it
+in a few days.</p>
+<p class="sd-card-text">Thanks for reaching out to us!</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+2. Resume your tickets</div>
+<p class="sd-card-text">On the <code class="docutils literal notranslate"><span class="pre">Homepage</span></code> your tickets listed in
+<code class="docutils literal notranslate"><span class="pre">XX</span> <span class="pre">highest</span> <span class="pre">priority</span> <span class="pre">tickets</span> <span class="pre">I</span> <span class="pre">own</span></code> should be your first
+tickets to resume, and clear.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+3. Check for non-taken tickets</div>
+<p class="sd-card-text">On the <code class="docutils literal notranslate"><span class="pre">Homepage</span></code> tickets under the
+<code class="docutils literal notranslate"><span class="pre">XX</span> <span class="pre">newest</span> <span class="pre">unowned</span> <span class="pre">tickets</span></code> will be your current
+tickets, prefer to take the oldest ticket.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+4. <strong>Take</strong> the ticket</div>
+<p class="sd-card-text">When you have read the ticket, and think you can solve
+it, <strong>Take</strong> it by clicking on the ticket.
+Now press the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> drop-down (top right corner) and select <code class="docutils literal notranslate"><span class="pre">Take</span></code>.
+Now you are the owner of the ticket, and the other supporters
+can see this.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+5. Start communicating</div>
+<p class="sd-card-text">Try to solve the problem for the questioner.</p>
+<p class="sd-card-text">Generally, additional details may be needed to help the student:</p>
+<ul class="simple">
+<li><p class="sd-card-text">which operating system and Python version</p></li>
+<li><p class="sd-card-text">how are they executing their commands, in an IDE terminal, or a <em>proper</em>
+terminal</p></li>
+<li><p class="sd-card-text">are they using <code class="docutils literal notranslate"><span class="pre">conda</span></code>, or a basic Python installation</p></li>
+<li><p class="sd-card-text">what is the exact error message</p></li>
+<li><p class="sd-card-text">quite often the entire workflow is important, errors may arise due to prior
+commands which can be difficult to know about if they <em>only</em> think the last
+command was the problematic one</p></li>
+</ul>
+<p class="sd-card-text">Press <code class="docutils literal notranslate"><span class="pre">Reply</span></code> from the message you wish to reply to, note that
+<em>only</em> older communications will be part of the new message. Generally
+you want to select <code class="docutils literal notranslate"><span class="pre">Reply</span></code> on the newest mail.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">RT will list all mails just like a regular mail client.
+By default, RT displays the oldest messages at the top,
+and the latest at the bottom.</p>
+<p class="sd-card-text">This default can be changed here:
+<span class="menuselection">Logged in as X ‣ Settings ‣ Preferences ‣ Ticket Display ‣ Show oldest history first</span></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p class="sd-card-text">Quite often it is nice with inputs from your other
+supporters. We do this in the ticket system via <code class="docutils literal notranslate"><span class="pre">Comments</span></code>.
+Be careful about putting sensitive stuff in a comment, when pressing
+reply you’ll often have the comments combined in the full message for
+the questioner (sometimes this <em>can</em> be useful).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+6. Resolving tickets</div>
+<p class="sd-card-text">When the questioner accepted the solution you should resolve it.</p>
+<p class="sd-card-text">Press the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> drop-down (top right corner) and select <code class="docutils literal notranslate"><span class="pre">Resolve</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="customizing-sphinx">
+<h2><a class="reference internal" href="sphinx.html#internal-sphinx"><span class="std std-ref">Customizing Sphinx</span></a><a class="headerlink" href="#customizing-sphinx" title="Link to this heading">#</a></h2>
+<p>Sphinx documentation can be found <a class="reference internal" href="sphinx.html#internal-sphinx"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="piwik-setup">
+<h2>Piwik setup<a class="headerlink" href="#piwik-setup" title="Link to this heading">#</a></h2>
+<p>Piwik setup is documented <a class="reference internal" href="piwik_documentation.html#piwik-documentation"><span class="std std-ref">here</span></a>.</p>
+<p>Piwik custom event tutorial can be found <a class="reference internal" href="piwik_tutorial.html#piwik-custom-event-tutorial"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="panopto-tutorial">
+<h2><a class="reference internal" href="panopto.html#internal-panopto"><span class="std std-ref">Panopto tutorial</span></a><a class="headerlink" href="#panopto-tutorial" title="Link to this heading">#</a></h2>
+<p>How to use Panopto and how to make video tutorials are documented <a class="reference internal" href="panopto.html#internal-panopto"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="exercises">
+<h2><a class="reference internal" href="exercises.html#internal-exercises"><span class="std std-ref">Exercises</span></a><a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<p>Go <a class="reference internal" href="exercises.html#internal-exercises"><span class="std std-ref">here</span></a> for the exercises.</p>
+</section>
+<section id="editing-documentation">
+<h2><a class="reference internal" href="documentation.html#internal-documentation"><span class="std std-ref">Editing documentation</span></a><a class="headerlink" href="#editing-documentation" title="Link to this heading">#</a></h2>
+<p>Go <a class="reference internal" href="documentation.html#internal-documentation"><span class="std std-ref">here</span></a> for instructions on how to
+fix/add new documentation.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interacting-with-students">Interacting with students</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-questions-when-mailing-chatting-with-questioners">Opening questions when mailing/chatting with questioners</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interacting-with-each-other">Interacting with each other</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord">Discord</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ticket-system-rt">Ticket system (RT)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-sphinx"><span class="xref std std-ref">Customizing Sphinx</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piwik-setup">Piwik setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panopto-tutorial"><span class="xref std std-ref">Panopto tutorial</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises"><span class="xref std std-ref">Exercises</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-documentation"><span class="xref std std-ref">Editing documentation</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By DTU Python support developers
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, DTU Python support.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

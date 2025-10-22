@@ -1,0 +1,1120 @@
+<!-- _templates/layout.html -->
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Technical University of Denmark (DTU) Python Installation Support" name="description" />
+<meta content="dtudk, dtu, support, python, python3, pip, pip3, conda, venv, virtualenv" name="keywords" />
+
+    <title>DTU Python Installation Support</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="_static/twemoji.css?v=2199c511" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/colors.css?v=ca198985" />
+    <link rel="stylesheet" type="text/css" href="_static/css/fontawesome6.css?v=dfa9907d" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css?v=63e98db3" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bannerStyles.css?v=5d5deea9" />
+    <link rel="stylesheet" type="text/css" href="_static/css/questionairStyles.css?v=7dfcb917" />
+    <link rel="stylesheet" type="text/css" href="_static/css/popupStyles.css?v=0bcfa664" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/tabs.js?v=3ee01567"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
+    <script src="_static/twemoji.js?v=a4381b3f"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script src="_static/js/external_tab.js?v=e06e64a3"></script>
+    <script src="_static/js/custom.js?v=9293e9f5"></script>
+    <script src="_static/js/auto-open-dropdown-link.js?v=4121caed"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install Python" href="install/python.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="#" class="logo-container">
+    <img src="_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="learn-more/vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="learn-more/index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="commonproblems/index.html">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><!-- _templates/logo_button.html -->
+<a href="#" class="logo-container">
+    <img src="_static/DTU_logo_Coral_Red_CMYK.svg" alt="DTU Logo" style="max-height: 40px;">
+</a>
+
+</div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="install/python.html">
+    Install Python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="learn-more/vscode/index.html">
+    Visual Studio Code
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="course/index.html">
+    Guides for DTU Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="learn-more/index.html">
+    Learn more
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="videos/index.html">
+    Video Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="uninstall/index.html">
+    Uninstall Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="commonproblems/index.html">
+    Common Problems
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="_static/DTU_logo_Coral_Red_CMYK.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/h8EVaV9ShP" title="Chat with us on Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Chat with us on Discord</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:pythonsupport@dtu.dk?subject=Python%20Support%20Request%20-%20%5Breplace%20with%20problem%5D&body=%0A-%20Relevant%20course%20number%20%28if%20applicable%29%3A%0A%0A-%20Description%20of%20the%20issue%20experienced%3A%0A%0A-%20Error%20messages%20%28if%20any%29%3A%0A%0A-%20Which%20versions%20of%20Python%20and/or%20packages%20do%20you%20have%3A%0A%0AKind%20regards%0A%3Cinsert%20name%3E%0A" title="Contact us by mail" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-envelope shake-hover fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Contact us by mail</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="install/python.html">Install Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="install/windows/automated.html"><span class="fab fa-windows"></span>  — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install/windows/manual.html"><span class="fab fa-windows"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install/macos/automated.html"><span class="fab fa-apple"></span> — Automated Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install/macos/manual.html"><span class="fab fa-apple"></span> — Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install/linux/manual.html"><span class="fab fa-linux"></span> — Manual Installation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="learn-more/vscode/index.html">Visual Studio Code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="learn-more/vscode/python-script.html">Python files (.py)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learn-more/vscode/jupyter-notebooks.html">Jupyter Notebooks (.ipynb)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="course/index.html">Guides for DTU Courses</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="course/01001.html">Mathematics 1a 01001/01003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course/01002.html">Mathematics 1b 01002/01004</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course/02002.html">Computer Programming 02002/02003</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course/02402.html">Statistics 02402</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course/02461.html">Introduction to Intelligent Systems 02461</a></li>
+<li class="toctree-l2"><a class="reference internal" href="course/10060.html">Physics 10060</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="learn-more/index.html">Learn more</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="learn-more/terminal.html">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learn-more/idle.html">IDLE (only for 02002/02003)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="learn-more/packages-and-environments/index.html">Packages and Environments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="learn-more/packages-and-environments/packages.html">Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learn-more/packages-and-environments/environments.html">Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learn-more/packages-and-environments/pip.html">pip</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="videos/index.html">Video Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uninstall/index.html">Uninstall Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commonproblems/index.html">Common Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/dtudk/pythonsupport-page" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1> Latest News</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reach-us">Reach us</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-on-this-website">What’s on this website?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#office-hours">Office hours</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p class="sd-text-center"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-shadow-sm sd-text-center sd-width-75 sd-p-2 sd-outline-primary-highlight sd-bg-primary sd-text-light sd-rounded-2 sd-shadow-md sd-animate-grow50 reference external" href="./workshops/index.html"><span><strong>Workshops on Computational thinking!</strong>
+
+<span class="far fa-calendar"></span> 22nd of September and rest of semester. <span class="far fa-clock"></span> <span class="fas fa-less-than"></span> 20 min</span></a></span></p>
+<!-- This hero is a modified version an example found here https://getbootstrap.com/docs/5.0/examples/heroes/ -->
+<script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+
+<div class="flex py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="padding-top: 0rem !important;">
+        <div class="orbit-stage col-10 col-sm-8 col-lg-5 me-auto ms-auto d-flex justify-content-center mt-0"
+            style="position: relative;">
+
+            <a href="https://www.dtu.dk" id="hero_logo" class="logo-container">
+            <img src="_static/DTU_logo_Coral_Red_CMYK.svg" id="hero_logo_img" class="d-block mx-lg-auto img-fluid pe-none"
+                width="100" height="117" alt="DTU Logo"
+                title="Visit the homepage of DTU"
+                style="background-color: transparent !important;">
+            </a>
+
+            <!-- Rotating logo's -->
+            <img id="numpy_logo" class="hero-icon pe-none" src="https://numpy.org/images/logo.svg"
+                loading="lazy" alt="numpy"
+                 title="The most widely used numerical infrastructure!">
+            <img id="pandas_logo" class="hero-icon pe-none" src="https://pandas.pydata.org/static/img/pandas_mark.svg"
+                data-light-src="https://pandas.pydata.org/static/img/pandas_mark.svg"
+                data-dark-src="https://pandas.pydata.org/static/img/pandas_mark_white.svg" loading="lazy" alt="pandas"
+                title="Providing dataframe and data-science tools">
+
+            <img id="matplotlib_logo" class="hero-icon pe-none" src="https://matplotlib.org/_static/images/documentation.svg"
+                loading="lazy" alt="matplotlib"
+                title="Plots, plots, plots...">
+            <img id="scipy_logo" class="hero-icon pe-none" src="https://scipy.org/images/logo.svg"
+                loading="lazy" alt="scipy"
+                title="Scientific package for anything that's not in numpy.">
+            <img id="jupyter_logo" class="hero-icon pe-none" src="_static/jupyter_logo_notext.svg"
+                loading="lazy" alt="jupyter"
+                title="Notebooks with Python, a widely used GUI for programming.">
+            <img id="python_logo" class="hero-icon pe-none"
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                height="56px" loading="lazy" alt="Python"
+                title="Python... That's why we are here, right?">
+        </div>
+        <div class="d-grid col-lg-7 gap-3 mt-0">
+            <h1 class="display-4 fw-bold lh-1 mb-3">DTU Python Installation Support</h1>
+            <p class="fs-5 text">Our goal is to ensure that students can get a Python environment up and running
+                according to the needs of DTU courses.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"
+                    onclick="PyS_redirectUser('package-managed.html');"
+                    title="Install Python according to the Polytechnical foundation courses"
+                    >Download Python</button>
+                <a href="learn-more/index.html" class="btn btn-link btn-lg px-4">See tutorials</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .prev-next-footer {
+    display: none;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 960px) {
+    .bd-article-container {
+      margin: auto;
+    }
+
+    .bd-sidebar-primary {
+      display: none;
+    }
+  }
+  
+  .orbit-stage{
+    /* 
+      This container ensures enough space to display the DTU logo in the center 
+      and all orbiting logos around it. Since the orbiting elements are 
+      positioned absolutely (and don’t affect normal document flow), this div 
+      uses a calculated minimum height based on the orbit radius, the center logo 
+      height, and some padding to ensure the layout stays properly scaled. 
+    */
+    --orbit-radius: clamp(90px, 22vw, 160px);   /* responsive radius */
+    --center-h: 117px;                          /* DTU logo height */
+    position: relative;
+    /* height = diameter of orbit + center logo height + a bit of padding */
+    min-height: calc(2 * var(--orbit-radius) + var(--center-h) + 24px);
+    display: grid;
+    place-items: center;                        /* keep center logo centered */
+    padding-bottom: 3rem !important;
+  }
+  #hero_logo {
+    background-color: transparent !important;
+  }
+  .hero-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: transparent !important;
+  }
+</style>
+
+<script>
+  const { animate, utils, createDraggable, createSpring, createTimeline } = anime;
+
+  // Theme-aware logo swapping
+  (function themeLogoSwapper() {
+    const DOC_EL = document.documentElement;
+
+    function isDark() {
+      return (DOC_EL.getAttribute('data-theme') || '').toLowerCase() === 'dark';
+    }
+
+    function getTargetSrc(img, darkMode) {
+      const lightSrc = img.getAttribute('data-light-src') || img.getAttribute('src');
+      const darkSrc  = img.getAttribute('data-dark-src');
+      return darkMode ? (darkSrc || lightSrc) : lightSrc;
+    }
+
+    function applyThemeLogos() {
+      const dark = isDark();
+      document.querySelectorAll('img[data-dark-src]').forEach(img => {
+        // Save original src as data-light-src if not already set
+        if (!img.getAttribute('data-light-src')) {
+          img.setAttribute('data-light-src', img.getAttribute('src'));
+        }
+        const target = getTargetSrc(img, dark);
+        if (target && img.src !== target) img.src = target;
+      });
+    }
+
+    function preloadDarkAssets() {
+      document.querySelectorAll('img[data-dark-src]').forEach(img => {
+        const url = img.getAttribute('data-dark-src');
+        if (url) { const preload = new Image(); preload.src = url; }
+      });
+    }
+
+    const observer = new MutationObserver(muts => {
+      for (const m of muts) {
+        if (m.type === 'attributes' && m.attributeName === 'data-theme') {
+          applyThemeLogos();
+          break;
+        }
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      preloadDarkAssets();
+      applyThemeLogos();
+      observer.observe(DOC_EL, { attributes: true, attributeFilter: ['data-theme'] });
+    });
+  })();
+
+  // Animations
+  logo_animation = animate('#hero_logo', {
+        scale: [
+            { to: 1.1, ease: 'inOut(3)', speed: 20 },
+            { to: 1, ease: createSpring({ stiffness: 300 }), speed: 20 }
+        ],
+        delay: 100
+    });
+
+    // Generalized orbit animation for any logo
+    function orbitLogo(centerId, logoId, phaseOffset = 0) {
+        const centerEl = document.getElementById(centerId);
+        const logoEl = document.getElementById(logoId);
+
+        const radius = 130;
+        const speed = 50_000;
+
+        const animate = (startTime) => {
+            const step = (time) => {
+
+                const logoWidth = logoEl.offsetWidth;
+                const logoHeight = logoEl.offsetHeight;
+
+                // value from 0 to 2pi
+                progress = (time - startTime) % speed / speed * 2 * Math.PI
+
+                let radiusTime = (time - startTime) / 1000 - 0.5
+                radiusTime = radiusTime > 0 ? radiusTime : 0
+                aniProgress = Math.pow(Math.tanh(radiusTime), 1 / 6)
+                radiusAni = radius * aniProgress
+                progress = 0
+
+                // update position
+                logoEl.style.left = centerEl.offsetLeft + centerEl.offsetWidth / 2 + radiusAni * Math.cos(progress + phaseOffset) - logoWidth/2 + "px"
+                logoEl.style.top = centerEl.offsetTop + centerEl.offsetHeight / 2 + radiusAni * Math.sin(progress + phaseOffset) - logoHeight/2 + "px"
+                logoEl.style.opacity = aniProgress
+                requestAnimationFrame(step)
+            }
+
+            requestAnimationFrame(step)
+        }
+
+        animate(performance.now())
+    }
+    // Start orbits
+    document.addEventListener("DOMContentLoaded", () => {
+        orbitLogo('hero_logo', 'numpy_logo', 0);
+        orbitLogo('hero_logo', 'pandas_logo', Math.PI / 3);
+        orbitLogo('hero_logo', 'matplotlib_logo', 2 * Math.PI / 3);
+        orbitLogo('hero_logo', 'scipy_logo', Math.PI);
+        orbitLogo('hero_logo', 'jupyter_logo', 4 * Math.PI / 3);
+        orbitLogo('hero_logo', 'python_logo', 5 * Math.PI / 3);
+    });
+</script>
+
+<section id="latest-news">
+<h1><span class="fas fa-newspaper"></span> Latest News<a class="headerlink" href="#latest-news" title="Link to this heading">#</a></h1>
+<div id="latest-news-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#latest-news-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#latest-news-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#latest-news-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="d-block w-100" alt="Latest News Post 1" style="height: 300px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Latest News Post 1</h5>
+        <p>DTU Python Support • September 26, 2024</p>
+        <p></p>
+        <a href="latest_news/sample_post_1" class="btn btn-primary">Read More 1 →</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="d-block w-100" alt="Python Installation Tips" style="height: 300px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Python Installation Tips</h5>
+        <p>DTU Python Support • September 25, 2024</p>
+        <p></p>
+        <a href="latest_news/sample_post_2" class="btn btn-primary">Read More 2 →</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../_static/DTU_logo_Coral_Red_CMYK.svg" class="d-block w-100" alt="Discord Community Growth" style="height: 300px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Discord Community Growth</h5>
+        <p>DTU Python Support • September 24, 2024</p>
+        <p></p>
+        <a href="latest_news/sample_post_3" class="btn btn-primary">Read More 3 →</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#latest-news-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#latest-news-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div><section id="reach-us">
+<span id="reach-us-reference"></span><h2>Reach us<a class="headerlink" href="#reach-us" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-person-running"></span> – Visit us</div>
+<div class="line-block">
+<div class="line">Open in 13 week semesters.</div>
+<div class="line">Mon – Fri (see table):</div>
+<div class="line">Building <strong>302</strong>, room <strong>92</strong>.</div>
+</div>
+<div class="line-block">
+<div class="line">Thursday (12:15-16):</div>
+<div class="line">Building <strong>358</strong>, room <strong>43</strong>.</div>
+</div>
+<div class="line-block">
+<div class="line">Click to see detailed office hours.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="#office-hours"><span>#office-hours</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-envelope"></span> – E-mail us</div>
+<div class="line-block">
+<div class="line">You can contact us via email at <a class="reference external" href="mailto:pythonsupport&#37;&#52;&#48;dtu&#46;dk">pythonsupport<span>&#64;</span>dtu<span>&#46;</span>dk</a>.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="mailto:pythonsupport&#37;&#52;&#48;dtu&#46;dk?subject=Python%20Support%20Request%20-%20%5Breplace%20with%20problem%5D&amp;body=%0A-%20Relevant%20course%20number%20%28if%20applicable%29%3A%0A%0A-%20Description%20of%20the%20issue%20experienced%3A%0A%0A-%20Error%20messages%20%28if%20any%29%3A%0A%0A-%20Which%20versions%20of%20Python%20and/or%20packages%20do%20you%20have%3A%0A%0AKind%20regards%0A%3Cinsert%20name%3E%0A"><span>mailto:pythonsupport<span>&#64;</span>dtu<span>&#46;</span>dk?subject=Python%20Support%20Request%20-%20%5Breplace%20with%20problem%5D&amp;body=%0A-%20Relevant%20course%20number%20%28if%20applicable%29%3A%0A%0A-%20Description%20of%20the%20issue%20experienced%3A%0A%0A-%20Error%20messages%20%28if%20any%29%3A%0A%0A-%20Which%20versions%20of%20Python%20and/or%20packages%20do%20you%20have%3A%0A%0AKind%20regards%0A%3Cinsert%20name%3E%0A</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fab fa-discord"></span> – Chat with us</div>
+<div class="line-block">
+<div class="line">Join our Discord channel to reach us online, even after normal working hours.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://discord.gg/h8EVaV9ShP"><span>https://discord.gg/h8EVaV9ShP</span></a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-s-on-this-website">
+<h2>What’s on this website?<a class="headerlink" href="#what-s-on-this-website" title="Link to this heading">#</a></h2>
+<p>Welcome to the DTU Python Installation Support website. This website provides
+essential information and resources for installing Python on your
+computer and helping you prepare to start programming with Python.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-download"></span> – Install Python</div>
+<div class="line-block">
+<div class="line">Access installation guides based on your operating system.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="install/python.html#install-python-reference"><span class="std std-ref">Install Python</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-book"></span> – DTU Course Guidelines</div>
+<div class="line-block">
+<div class="line">Find installation guides for specific DTU courses or host one if you are an instructor.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="course/index.html#course-index"><span class="std std-ref">Guides for DTU Courses</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-info-circle"></span> – Learn More</div>
+<div class="line-block">
+<div class="line">Navigate Python with information on pip, environments, terminal usage, and uninstallation.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="learn-more/index.html#learn-more"><span class="std std-ref">Learn more</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-video"></span> – Video Tutorials</div>
+<div class="line-block">
+<div class="line">Watch video guides on various Python topics.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="videos/index.html#video-tutorials-reference"><span class="std std-ref">Video Tutorials</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-book-open"></span> – Workshop</div>
+<div class="line-block">
+<div class="line">Join our on-site workshops on computational thinking.</div>
+<div class="line">Topics on functions, loops, conditionals and variables.</div>
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="workshops/index.html#workshops"><span class="std std-ref">Workshops – Computational Thinking</span></a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="office-hours">
+<span id="id1"></span><h2>Office hours<a class="headerlink" href="#office-hours" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Hours</p></th>
+<th class="head"><p>Monday</p></th>
+<th class="head"><p>Tuesday</p></th>
+<th class="head"><p>Wednesday</p></th>
+<th class="head"><p>Thursday</p></th>
+<th class="head"><p>Friday</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10-12:30</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92, or online</p></td>
+</tr>
+<tr class="row-odd"><td><p>12:30-16</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92, or online</p></td>
+<td><p>302.A92 / 358.43, or online</p></td>
+<td><p>302.A92, or online</p></td>
+</tr>
+<tr class="row-even"><td><p>18-20</p></td>
+<td><p>Online only</p></td>
+<td><p>Online only</p></td>
+<td><p>Online only</p></td>
+<td><p>Online only</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>20-22</p></td>
+<td><p>Online only</p></td>
+<td><p>Online only</p></td>
+<td><p>Online only</p></td>
+<td><p>Online only</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Available via online channels (e-mail and Discord) during office hours.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="install/python.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Install Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By DTU Python support developers
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, DTU Python support.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

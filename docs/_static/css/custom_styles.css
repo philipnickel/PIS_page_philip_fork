@@ -1099,3 +1099,91 @@ since it is also on the header.
 html[data-theme="dark"] .env-search::placeholder {
   color: darkgray;
 }
+
+/* Blog Post Card Styling */
+.blog-post-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.blog-post-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.blog-post-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 1.5rem;
+}
+
+.blog-post-meta {
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.blog-post-badge {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.blog-post-body {
+  padding: 1.5rem;
+}
+
+.blog-post-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.blog-post-excerpt {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.blog-post-actions {
+  margin-top: 1rem;
+}
+
+.blog-post-actions a {
+  color: var(--bg-primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--bg-primary);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.blog-post-actions a:hover {
+  background-color: var(--bg-primary);
+  color: white;
+  text-decoration: none;
+}
+
+.blog-post-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-post-image img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-post-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Removed custom carousel styling to use native sphinx-design styling */
